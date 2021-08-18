@@ -1,0 +1,3795 @@
+@charset "UTF-8";
+/*
+Mixins.
+*/
+/*Reseteo del CSS ,links con color y sin estilo y listas sin estilo./////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+* {
+  margin: 0%;
+  padding: 0%; }
+
+li {
+  list-style: none; }
+
+/*
+Pertenece a la pestaña index.html /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+/*
+ACA EMPIEZA EL HEADER DEL INDEX
+*/
+.header {
+  background-image: url(../Imagenes/imagenindexdos.png);
+  background-size: cover;
+  background-position-y: 50%;
+  background-position-x: 40%;
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 33.33%);
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "logo logo logo" "logo logo logo" "secciones secciones secciones"; }
+  .header a {
+    text-decoration: none;
+    color: white; }
+  .header__logoHeader {
+    height: 110%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto;
+    grid-area: logo; }
+    .header__logoHeader .header__imgLogo {
+      height: 100%;
+      width: 100%; }
+  .header__navIndex {
+    height: auto;
+    width: 100%;
+    display: inline-block;
+    grid-area: secciones;
+    align-self: end;
+    margin: 2% 0% 2% 0%; }
+    .header__navIndex .header__seccionesIndex {
+      text-transform: none;
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      align-content: flex-end;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: nowrap;
+      margin: auto; }
+      .header__navIndex .header__seccionesIndex .header__itemIndex {
+        font-style: normal;
+        font-weight: bolder;
+        font-family: "Baloo Tammudu 2", cursive;
+        font-size: 35px;
+        color: white;
+        text-align: center;
+        display: inline-block;
+        margin: 0% 1% 0% 1%; }
+
+/*
+Main Index
+*/
+.divMainPromociones {
+  background-color: #ffd9a7;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin: auto; }
+
+.divImagenPromociones {
+  height: 85%;
+  width: 100%;
+  margin: 2%; }
+
+.imagenPromociones {
+  height: 100%;
+  width: 100%;
+  border: 10px solid #5a1a00;
+  margin: 0%; }
+
+.divTextoPromociones {
+  height: 100%;
+  width: 100%;
+  margin: 0%;
+  justify-content: center;
+  display: flex;
+  flex-direction: column; }
+
+.tituloPromociones {
+  font-style: normal;
+  font-weight: bolder;
+  font-family: "Baloo Tammudu 2", cursive;
+  font-size: 100px;
+  color: black;
+  text-align: center; }
+
+.parrafoPromociones {
+  font-style: normal;
+  font-weight: normal;
+  font-family: "Baloo Tammudu 2", cursive;
+  font-size: 100px;
+  color: black;
+  text-align: center; }
+
+.imagenSeparadoraDeDiv {
+  background-image: url(../Imagenes/imagenseparadorados.png);
+  background-size: cover;
+  background-position-y: center;
+  background-position-x: center;
+  height: 100vh;
+  width: 100%; }
+
+/*
+Aca empieza el apartado de historia del index
+*/
+.divMainHistoria {
+  background-color: #ffd9a7;
+  height: 100vh;
+  width: 100%;
+  flex-direction: row-reverse;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin: auto;
+  display: flex; }
+
+.divImagenMainHistoria {
+  height: 75%;
+  width: 100%;
+  margin: 5% 5% 5% 2%; }
+
+.imagenMainHistoria {
+  height: 100%;
+  width: 100%;
+  border: 10px solid #5a1a00; }
+
+.divTextoMainHistoria {
+  justify-content: center;
+  align-content: center;
+  margin: 2% 2% 2% 2%;
+  width: 90%; }
+
+.tituloMainHistoria {
+  font-style: normal;
+  font-weight: bolder;
+  font-family: "Baloo Tammudu 2", cursive;
+  font-size: 70px;
+  color: black;
+  text-align: center; }
+
+.parrafoMainHistoria {
+  font-style: normal;
+  font-weight: normal;
+  font-family: "Baloo Tammudu 2", cursive;
+  font-size: 30px;
+  color: black;
+  text-align: center; }
+
+/*
+    Footer///////////////////////////////////////////
+*/
+.footer {
+  background-color: #571b00;
+  height: 100%;
+  width: 100%; }
+  .footer .footer-container {
+    display: grid;
+    grid-template-columns: 500px 1fr 300px;
+    grid-template-rows: repeat(2, 50%);
+    grid-template-areas: "logo redes secciones" "logo redes secciones";
+    justify-content: center;
+    justify-items: center; }
+    .footer .footer-container__logo {
+      grid-area: logo;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      margin: auto; }
+      .footer .footer-container__logo .footer-container__img {
+        height: 100%;
+        width: 100%;
+        padding: 0%;
+        margin: auto; }
+    .footer .footer-container__redes {
+      grid-area: redes;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      margin: auto; }
+      .footer .footer-container__redes .footer-container__listaRedes {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        margin: auto;
+        padding: 0%; }
+        .footer .footer-container__redes .footer-container__listaRedes .footer-container__itemRedes {
+          height: 100%;
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          align-content: center;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: nowrap;
+          margin: auto; }
+          .footer .footer-container__redes .footer-container__listaRedes .footer-container__itemRedes .footer-container__iconos {
+            height: 60%;
+            width: 60%;
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: nowrap;
+            margin: auto; }
+    .footer .footer-container__secciones {
+      grid-area: secciones;
+      height: auto;
+      width: auto;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: nowrap;
+      margin: auto; }
+      .footer .footer-container__secciones a {
+        list-style: none;
+        text-transform: none;
+        text-decoration: none;
+        color: white; }
+      .footer .footer-container__secciones .footer-container__listaSecciones {
+        height: auto;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: nowrap;
+        margin: auto; }
+        .footer .footer-container__secciones .footer-container__listaSecciones .footer-container__item {
+          font-style: normal;
+          font-weight: bold;
+          font-family: "Baloo Tammudu 2", cursive;
+          font-size: 25px;
+          color: white;
+          text-align: center;
+          text-transform: none;
+          padding-top: 10%;
+          display: inline-block; }
+
+/*
+Navbar secciones con BS5
+*/
+.headerSecciones {
+  background-color: #834019; }
+
+.container {
+  background-color: #834019;
+  width: 100%; }
+
+.navbar-brand {
+  height: 100%;
+  width: 50%; }
+
+.navbar {
+  width: 100%;
+  height: 100%; }
+
+.navbar-nav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: space-between; }
+
+.logoSecciones {
+  width: 55%;
+  height: 55%; }
+
+.itemNav {
+  font-style: normal;
+  font-weight: bold;
+  font-family: "Baloo Tammudu 2", cursive;
+  font-size: 27px;
+  color: white;
+  text-align: center;
+  text-transform: none;
+  display: flex;
+  flex-wrap: nowrap; }
+
+/*
+Fin navbar con BS
+*/
+.mainMenu {
+  height: 100%;
+  width: 100%;
+  background-color: #ffd9a7;
+  margin: 0%; }
+
+.tituloMainMenu {
+  font-style: normal;
+  font-weight: bolder;
+  font-family: "Baloo Tammudu 2", cursive;
+  font-size: 40px;
+  color: black;
+  text-align: center;
+  padding: 2% 0% 0% 0%; }
+
+.losMejoresPlatosMenu {
+  height: 100%;
+  width: 100%;
+  padding: auto; }
+
+.ulDelMenu {
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  grid-template-rows: repeat(3, 33%);
+  grid-template-areas: "imagen1 imagen2 imagen3" "imagen4 imagen5 imagen6" "imagen7 imagen8 imagen9";
+  justify-content: center;
+  align-content: center;
+  row-gap: 2%;
+  column-gap: 2%; }
+
+.listaMenuUno {
+  grid-area: imagen1;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin: auto;
+  margin: 0%;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column; }
+
+.listaMenuDos {
+  grid-area: imagen4;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin: auto; }
+
+.listaMenuTres {
+  grid-area: imagen7;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin: auto; }
+
+.listaMenuCuatro {
+  grid-area: imagen9;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin: auto; }
+
+.listaMenuCinco {
+  grid-area: imagen8;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin: auto; }
+
+.listaMenuSeis {
+  grid-area: imagen3;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin: auto; }
+
+.listaMenuSiete {
+  grid-area: imagen2;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin: auto; }
+
+.listaMenuOcho {
+  grid-area: imagen5;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin: auto; }
+
+.listaMenuNueve {
+  grid-area: imagen6;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin: auto; }
+
+.listaMenuUno:hover, .listaMenuDos:hover, .listaMenuTres:hover, .listaMenuCuatro:hover, .listaMenuCinco:hover {
+  width: 115%;
+  height: 115%;
+  transition: all 1s; }
+
+.imagenNumeroUno, .imagenNumeroDos, .imagenNumeroTres, .imagenNumeroCuatro, .imagenNumeroCinco, .imagenNumeroSeis, .imagenNumeroSiete, .imagenNumeroOcho, .imagenNumeroNueve {
+  height: 80%;
+  width: 80%;
+  justify-self: center;
+  align-self: center;
+  border: solid 10px #5a1a00; }
+
+.pDelMenu {
+  font-style: normal;
+  font-weight: normal;
+  font-family: "Baloo Tammudu 2", cursive;
+  font-size: 23px;
+  color: black;
+  text-align: center;
+  margin: auto; }
+
+/*
+Pertenece a la pestaña de Reservas /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+.main-reservas {
+  height: 100vh;
+  width: 100%;
+  background-color: #ffd9a7; }
+  .main-reservas .containerReservas {
+    height: 85%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto;
+    padding: 2%; }
+  .main-reservas__titulo {
+    font-style: normal;
+    font-weight: bold;
+    font-family: "Baloo Tammudu 2", cursive;
+    font-size: 40px;
+    color: black;
+    text-align: center;
+    text-transform: none;
+    padding: 0; }
+  .main-reservas__imagen {
+    height: 100%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto; }
+    .main-reservas__imagen .main-reservas__img {
+      height: 100%;
+      width: 100%;
+      margin: auto;
+      border: 10px solid #5a1a00; }
+  .main-reservas__informacion {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    width: 47%;
+    height: 100%; }
+  .main-reservas .accordion {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-content: center; }
+  .main-reservas .accordion-item {
+    background-color: transparent;
+    font-style: normal;
+    font-weight: normal;
+    font-family: "Baloo Tammudu 2", cursive;
+    font-size: 20px;
+    color: black;
+    text-align: center; }
+  .main-reservas .accordion-button {
+    background-color: rgba(173, 98, 0, 0.582) !important;
+    font-style: normal;
+    font-weight: normal;
+    font-family: "Baloo Tammudu 2", cursive;
+    font-size: 23px;
+    color: black;
+    text-align: center; }
+
+/*
+Pertenece a la pestaña de Contacto /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+.main-contacto {
+  height: 100%;
+  width: 100%;
+  background-color: #ffd9a7; }
+  .main-contacto__titulo {
+    font-style: normal;
+    font-weight: bold;
+    font-family: "Baloo Tammudu 2", cursive;
+    font-size: 40px;
+    color: black;
+    text-align: center;
+    text-transform: none;
+    margin: auto;
+    padding: 2%; }
+
+.grid-contacto {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 50% 50%;
+  grid-template-areas: "api api" "formulario informacion";
+  row-gap: 5px;
+  justify-content: space-between;
+  align-content: center; }
+  .grid-contacto__api {
+    height: 100%;
+    width: 95%;
+    margin: auto;
+    grid-area: api;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .grid-contacto__api .grid-contacto__img {
+      height: 100%;
+      width: 100%;
+      justify-self: center;
+      border: solid 7px #5a1a00; }
+  .grid-contacto__formulario {
+    height: 100%;
+    width: 100%;
+    font-style: normal;
+    font-weight: normal;
+    font-family: "Baloo Tammudu 2", cursive;
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    text-transform: none;
+    grid-area: formulario;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto;
+    padding: 5%; }
+    .grid-contacto__formulario .datosPersonalesContacto {
+      font-style: normal;
+      font-weight: bolder;
+      font-family: "Baloo Tammudu 2", cursive;
+      font-size: 30px;
+      color: black;
+      text-align: center;
+      text-transform: none; }
+  .grid-contacto__informacion {
+    grid-area: informacion;
+    height: min-content;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-content: center;
+    justify-content: center; }
+  .grid-contacto__texto-h2 {
+    font-style: normal;
+    font-weight: bolder;
+    font-family: "Baloo Tammudu 2", cursive;
+    font-size: 35px;
+    color: black;
+    text-align: center; }
+  .grid-contacto__texto {
+    font-style: normal;
+    font-weight: normal;
+    font-family: "Baloo Tammudu 2", cursive;
+    font-size: 25px;
+    color: black;
+    text-align: center; }
+
+/*
+Pertenece a la pestaña Preguntas frecuentes /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+.main-faq {
+  height: 100%;
+  width: 100%;
+  background-color: #ffd9a7;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: 150px repeat(2, 40%);
+  grid-template-areas: "titulo titulo" "container container2" "container container2";
+  justify-content: center;
+  align-items: center;
+  align-content: center; }
+  .main-faq__titulo {
+    font-style: normal;
+    font-weight: bolder;
+    font-family: "Baloo Tammudu 2", cursive;
+    font-size: 40px;
+    color: black;
+    text-align: center;
+    text-transform: none;
+    grid-area: titulo;
+    padding: 2% 2% 2% 2%; }
+  .main-faq__primer-container {
+    grid-area: container;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto;
+    padding: 0% 7% 0% 5%; }
+  .main-faq__segundo-container {
+    grid-area: container2;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto;
+    padding: 0% 7% 0% 5%; }
+  .main-faq__preguntas {
+    font-style: normal;
+    font-weight: bolder;
+    font-family: "Baloo Tammudu 2", cursive;
+    font-size: 35px;
+    color: black;
+    text-align: center; }
+  .main-faq__respuestas {
+    font-style: normal;
+    font-weight: normal;
+    font-family: "Baloo Tammudu 2", cursive;
+    font-size: 25px;
+    color: black;
+    text-align: center; }
+
+/*
+PESTAÑA QUIENES SOMOS //////////////////////////////////////////////////////////////////////////////////////////////
+*/
+.main-qs {
+  height: 100vh;
+  width: 100%;
+  background-color: #ffd9a7; }
+  .main-qs__titulo {
+    font-style: normal;
+    font-weight: bolder;
+    font-family: "Baloo Tammudu 2", cursive;
+    font-size: 40px;
+    color: black;
+    text-align: center;
+    text-transform: none;
+    padding: 2% 2% 1% 2%; }
+  .main-qs .container-qs {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto; }
+  .main-qs__imgs {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto; }
+    .main-qs__imgs .main-qs__img {
+      height: 90%;
+      width: 90%;
+      margin: 5% 5% 5% 8%;
+      border: 10px solid #5a1a00; }
+  .main-qs__texto {
+    height: 100%;
+    width: 47%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto; }
+    .main-qs__texto .main-qs__h2 {
+      font-style: normal;
+      font-weight: bolder;
+      font-family: "Baloo Tammudu 2", cursive;
+      font-size: 40px;
+      color: black;
+      text-align: center;
+      text-transform: none; }
+    .main-qs__texto .main-qs__p {
+      font-style: normal;
+      font-weight: normal;
+      font-family: "Baloo Tammudu 2", cursive;
+      font-size: 30px;
+      color: black;
+      text-align: center; }
+
+/*
+////////////////////////// MEDIA QUERYS //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+/*
+Celulares /////////////////////////////////////////
+*/
+@media only screen and (max-device-width: 768px) {
+  .header {
+    background-image: url(../Imagenes/imagenindexdos.png);
+    background-size: cover;
+    background-position-y: 50%;
+    background-position-x: 40%;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 33.33%);
+    grid-template-rows: 10% 45% 45%;
+    grid-template-areas: "secciones secciones secciones" "logo logo logo" "logo logo logo"; }
+    .header__logoHeader {
+      height: 40%;
+      width: 85%;
+      display: inline-block;
+      margin: auto;
+      grid-area: logo; }
+      .header__logoHeader .header__imgLogo {
+        height: 100%;
+        width: 100%; }
+    .header__navIndex {
+      height: auto;
+      width: 100%;
+      display: inline-block;
+      grid-area: secciones;
+      align-self: end; }
+      .header__navIndex a {
+        text-decoration: none;
+        color: white; }
+      .header__navIndex .header__seccionesIndex {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        align-content: flex-end;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: nowrap;
+        margin: auto;
+        padding: 0%; }
+        .header__navIndex .header__seccionesIndex .header__itemIndex {
+          display: inline-block;
+          margin: 0% 1% 0% 1%;
+          font-style: normal;
+          font-weight: bolder;
+          font-family: "Baloo Tammudu 2", cursive;
+          font-size: 14px;
+          color: white;
+          text-align: center;
+          text-transform: none; }
+  /*
+Main Index
+*/
+  .divMainPromociones {
+    background-color: #ffd9a7;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto; }
+  .divImagenPromociones {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin: auto; }
+  .imagenPromociones {
+    height: 80%;
+    width: 90%;
+    border: 4px solid #5a1a00;
+    margin: auto; }
+  .divTextoPromociones {
+    height: 50%;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto; }
+  .tituloPromociones {
+    font-style: normal;
+    font-weight: bolder;
+    font-family: "Baloo Tammudu 2", cursive;
+    font-size: 60px;
+    color: black;
+    text-align: center; }
+  .parrafoPromociones {
+    font-style: normal;
+    font-weight: normal;
+    font-family: "Baloo Tammudu 2", cursive;
+    font-size: 60px;
+    color: black;
+    text-align: center; }
+  .imagenSeparadoraDeDiv {
+    background-image: url(../Imagenes/imagenseparadorados.png);
+    background-size: cover;
+    background-position-y: center;
+    background-position-x: center;
+    height: 100vh;
+    width: 100%; }
+  /*
+    Aca empieza el apartado de historia del index
+    */
+  .divMainHistoria {
+    background-color: #ffd9a7;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto; }
+  .divImagenMainHistoria {
+    height: 60%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto; }
+  .imagenMainHistoria {
+    height: 75%;
+    width: 95%;
+    border: 4px solid #5a1a00; }
+  .divTextoMainHistoria {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto; }
+  .tituloMainHistoria {
+    font-style: normal;
+    font-weight: bolder;
+    font-family: "Baloo Tammudu 2", cursive;
+    font-size: 30px;
+    color: black;
+    text-align: center;
+    padding: 2%; }
+  .parrafoMainHistoria {
+    font-style: normal;
+    font-weight: normal;
+    font-family: "Baloo Tammudu 2", cursive;
+    font-size: 17px;
+    color: black;
+    text-align: center;
+    padding: 2%; }
+  /*
+        Footer///////////////////////////////////////////
+*/
+  .footer {
+    background-color: #571b00;
+    height: 100%;
+    width: 100%; }
+    .footer .footer-container {
+      display: grid;
+      grid-template-columns: repeat(3, 33.33%);
+      grid-template-rows: repeat(2, 33%) 75px;
+      grid-template-areas: "logo logo logo" "redes redes redes" "secciones secciones secciones";
+      justify-content: center;
+      align-items: center;
+      align-content: center; }
+      .footer .footer-container__logo {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        margin: auto;
+        padding: 0%;
+        grid-area: logo; }
+        .footer .footer-container__logo .footer-container__img {
+          height: 180px;
+          width: 75%;
+          margin: auto;
+          padding: 0%; }
+      .footer .footer-container__redes {
+        height: 100%;
+        width: 100%;
+        grid-area: redes;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+        margin: auto;
+        padding: 0%; }
+        .footer .footer-container__redes .footer-container__listaRedes {
+          height: 80%;
+          width: 80%;
+          display: flex;
+          flex-direction: row;
+          align-content: center;
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: nowrap;
+          margin: auto;
+          padding: 0%; }
+          .footer .footer-container__redes .footer-container__listaRedes .footer-container__itemRedes {
+            height: 67%;
+            width: 25%;
+            margin: auto; }
+            .footer .footer-container__redes .footer-container__listaRedes .footer-container__itemRedes .footer-container__iconos {
+              height: 100%;
+              width: 100%; }
+      .footer .footer-container__secciones {
+        height: 80%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: nowrap;
+        margin: 0%;
+        grid-area: secciones; }
+        .footer .footer-container__secciones .footer-container__listaSecciones {
+          display: flex;
+          flex-direction: row;
+          align-content: center;
+          justify-content: space-around;
+          align-items: center;
+          flex-wrap: nowrap;
+          margin: auto;
+          padding: 0%; }
+          .footer .footer-container__secciones .footer-container__listaSecciones .footer-container__item {
+            font-style: normal;
+            font-weight: bolder;
+            font-family: "Baloo Tammudu 2", cursive;
+            font-size: 15px;
+            color: white;
+            text-align: center;
+            text-transform: none;
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: nowrap;
+            margin: auto;
+            padding-right: 3%; }
+  /*
+Navbar secciones con BS5
+*/
+  .headerSecciones {
+    background-color: #834019; }
+  .container {
+    background-color: #834019;
+    height: auto;
+    width: 100%; }
+  .navbar-brand {
+    height: 100%;
+    width: 50%; }
+  .navbar {
+    height: 100%;
+    width: 100%; }
+  .navbar-nav {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: space-between; }
+  .logoSecciones {
+    height: 100%;
+    width: 100%; }
+  .itemNav {
+    font-style: normal;
+    font-weight: bold;
+    font-family: "Baloo Tammudu 2", cursive;
+    font-size: 15px;
+    color: white;
+    text-align: auto;
+    text-transform: none;
+    display: flex;
+    flex-wrap: nowrap; }
+  /*
+Fin navbar con BS
+*/
+  /*
+Pertenece a la pestaña de Menu /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+  .mainMenu {
+    height: 100%;
+    width: 100%;
+    background-color: #ffd9a7;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap; }
+  .tituloMainMenu {
+    font-style: normal;
+    font-weight: bolder;
+    font-family: "Baloo Tammudu 2", cursive;
+    font-size: 25px;
+    color: black;
+    text-align: center;
+    padding: 4% 0% 0% 0%; }
+  .losMejoresPlatosMenu {
+    height: 100%;
+    width: 100%;
+    padding: auto;
+    margin: auto; }
+  .ulDelMenu {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: "imagen1 imagen2" "imagen3 imagen4" "imagen5 imagen6" "imagen7 imagen8" "imagen9 imagen9";
+    justify-content: center;
+    align-content: center;
+    row-gap: 0%;
+    column-gap: 0%;
+    margin: auto;
+    padding: 0%; }
+  .listaMenuUno {
+    grid-area: imagen1;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto; }
+  .listaMenuDos {
+    grid-area: imagen4;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto; }
+  .listaMenuTres {
+    grid-area: imagen7;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto; }
+  .listaMenuCuatro {
+    grid-area: imagen9;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto; }
+  .listaMenuCinco {
+    grid-area: imagen8;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto; }
+  .listaMenuSeis {
+    grid-area: imagen3;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto; }
+  .listaMenuSiete {
+    grid-area: imagen2;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto; }
+  .listaMenuOcho {
+    grid-area: imagen5;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto; }
+  .listaMenuNueve {
+    grid-area: imagen6;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto; }
+  .listaMenuUno:hover, .listaMenuDos:hover, .listaMenuTres:hover, .listaMenuCuatro:hover, .listaMenuCinco:hover, .listaMenuSeis:hover, .listaMenuSiete:hover, .listaMenuOcho:hover, .listaMenuNueve:hover {
+    width: 115%;
+    height: 115%;
+    transition: all 1s; }
+  .imagenNumeroUno, .imagenNumeroDos, .imagenNumeroTres, .imagenNumeroCuatro, .imagenNumeroCinco, .imagenNumeroSeis, .imagenNumeroSiete, .imagenNumeroOcho, .imagenNumeroNueve {
+    height: 75%;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto;
+    justify-self: center;
+    align-self: center;
+    border: solid 4px #5a1a00; }
+  .pDelMenu {
+    font-style: normal;
+    font-weight: normal;
+    font-family: "Baloo Tammudu 2", cursive;
+    font-size: 17px;
+    color: black;
+    text-align: center;
+    margin: auto;
+    padding-top: 2%; }
+  /*
+Pertenece a la pestaña de Reservas /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+  .main-reservas {
+    height: 100%;
+    width: 100%;
+    background-color: #ffd9a7;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto; }
+    .main-reservas__titulo {
+      font-style: normal;
+      font-weight: bold;
+      font-family: "Baloo Tammudu 2", cursive;
+      font-size: 25px;
+      color: black;
+      text-align: center;
+      text-transform: none;
+      padding: 4% 0% 0% 0%; }
+    .main-reservas .containerReservas {
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      margin: auto; }
+    .main-reservas__imagen {
+      display: flex;
+      height: 100%;
+      width: 100%;
+      align-content: center;
+      justify-content: center; }
+      .main-reservas__imagen .main-reservas__img {
+        height: 90%;
+        width: 90%;
+        margin: auto;
+        border: 4px solid #5a1a00; }
+    .main-reservas__informacion {
+      height: 100%;
+      width: 100%;
+      font-style: normal;
+      font-weight: normal;
+      font-family: "Baloo Tammudu 2", cursive;
+      font-size: 15px;
+      color: black;
+      text-align: auto;
+      display: flex;
+      flex-direction: row; }
+    .main-reservas .accordion {
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      margin: auto;
+      padding: 10%;
+      height: 100%;
+      width: 100%; }
+    .main-reservas .accordion-item {
+      background-color: transparent;
+      width: 100%; }
+    .main-reservas .accordion-button {
+      background-color: rgba(173, 98, 0, 0.582);
+      font-style: normal;
+      font-weight: normal;
+      font-family: "Baloo Tammudu 2", cursive;
+      font-size: 20px;
+      color: black;
+      text-align: auto; }
+  /*
+Pertenece a la pestaña de Contacto /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+  .main-contacto {
+    height: 100%;
+    width: 100%;
+    background-color: #ffd9a7; }
+    .main-contacto__titulo {
+      font-style: normal;
+      font-weight: bold;
+      font-family: "Baloo Tammudu 2", cursive;
+      font-size: 25px;
+      color: black;
+      text-align: center;
+      text-align: center;
+      text-transform: none;
+      color: black;
+      margin: auto;
+      padding: 4% 0% 0% 0%; }
+  .grid-contacto {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 330px 340px 1fr 50px;
+    grid-template-areas: "api" "informacion"  "formulario" "formulario";
+    row-gap: 5px;
+    justify-content: space-between;
+    align-content: center; }
+    .grid-contacto__api {
+      height: 100%;
+      width: 100%;
+      margin: auto;
+      grid-area: api;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .grid-contacto__api .grid-contacto__img {
+        height: 80%;
+        width: 95%;
+        justify-self: center;
+        border: solid 4px #5a1a00; }
+    .grid-contacto__informacion {
+      grid-area: informacion;
+      height: 100%;
+      width: 100%;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: nowrap;
+      margin: auto; }
+    .grid-contacto__texto {
+      font-style: normal;
+      font-weight: normal;
+      font-family: "Baloo Tammudu 2", cursive;
+      font-size: 17px;
+      color: black;
+      text-align: center; }
+    .grid-contacto__texto-h2 {
+      font-style: normal;
+      font-weight: bolder;
+      font-family: "Baloo Tammudu 2", cursive;
+      font-size: 20px;
+      color: black;
+      text-align: center; }
+    .grid-contacto__formulario {
+      height: 100%;
+      width: 100%;
+      font-style: normal;
+      font-weight: normal;
+      font-family: "Baloo Tammudu 2", cursive;
+      font-size: 17px;
+      color: black;
+      text-align: center;
+      text-transform: none;
+      padding: 5%;
+      grid-area: formulario;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: nowrap;
+      margin: auto; }
+      .grid-contacto__formulario .datosPersonalesContacto {
+        font-style: normal;
+        font-weight: bolder;
+        font-family: "Baloo Tammudu 2", cursive;
+        font-size: 20px;
+        color: black;
+        text-align: center;
+        text-transform: none; }
+  /*
+Pertenece a la pestaña Preguntas frecuentes /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+  .main-faq {
+    height: 100%;
+    width: 100%;
+    background-color: #ffd9a7;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100px 580px 620px;
+    grid-template-areas: "titulo" "container" "container2";
+    justify-content: center;
+    align-items: center;
+    align-content: center; }
+    .main-faq__titulo {
+      font-style: normal;
+      font-weight: bolder;
+      font-family: "Baloo Tammudu 2", cursive;
+      font-size: 25px;
+      color: black;
+      text-align: center;
+      text-transform: none;
+      grid-area: titulo;
+      padding: 4% 0% 0% 0%; }
+    .main-faq__primer-container {
+      height: 100%;
+      width: 100%;
+      padding: 3%;
+      grid-area: container;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: nowrap;
+      margin: auto; }
+    .main-faq__segundo-container {
+      height: 100%;
+      width: 100%;
+      padding: 2%;
+      grid-area: container2;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: nowrap;
+      margin: auto; }
+    .main-faq__preguntas {
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: nowrap;
+      margin: auto;
+      font-style: normal;
+      font-weight: bolder;
+      font-family: "Baloo Tammudu 2", cursive;
+      font-size: 19px;
+      color: black;
+      text-align: center;
+      padding: 3%; }
+    .main-faq__respuestas {
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: nowrap;
+      margin: auto;
+      font-style: normal;
+      font-weight: normal;
+      font-family: "Baloo Tammudu 2", cursive;
+      font-size: 17px;
+      color: black;
+      text-align: center;
+      padding: 3%; }
+  /*
+Pertenece a la pestaña Quienessomos.html /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+  .main-qs {
+    height: 100%;
+    width: 100%;
+    background-color: #ffd9a7;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto; }
+    .main-qs__titulo {
+      font-style: normal;
+      font-weight: bolder;
+      font-family: "Baloo Tammudu 2", cursive;
+      font-size: 25px;
+      color: black;
+      text-align: center;
+      text-transform: none;
+      grid-area: titulo;
+      padding: 4% 0% 0% 0%; }
+    .main-qs .container-qs {
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: nowrap;
+      margin: auto; }
+    .main-qs__imgs {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      margin: auto; }
+      .main-qs__imgs .main-qs__img {
+        height: 90%;
+        width: 95%;
+        margin: auto;
+        border: 5px solid #5a1a00; }
+    .main-qs__texto {
+      height: 100%;
+      width: 100%;
+      font-style: normal;
+      font-weight: normal;
+      font-family: "Baloo Tammudu 2", cursive;
+      font-size: auto;
+      color: black;
+      text-align: center;
+      text-transform: none;
+      display: flex;
+      flex-direction: column;
+      margin: auto; }
+      .main-qs__texto .main-qs__h2 {
+        font-style: normal;
+        font-weight: bolder;
+        font-family: "Baloo Tammudu 2", cursive;
+        font-size: 23px;
+        color: black;
+        text-align: center;
+        text-transform: none;
+        padding: 4% 0% 0% 0%; }
+      .main-qs__texto .main-qs__p {
+        font-style: normal;
+        font-weight: normal;
+        font-family: "Baloo Tammudu 2", cursive;
+        font-size: 15px;
+        color: black;
+        text-align: center;
+        padding: 2%; } }
+
+/*
+///////////////////////////////////// TABLETS //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+@media only screen and (min-width: 768px) {
+  .header {
+    background-image: url(../Imagenes/imagenindexdos.png);
+    background-size: cover;
+    background-position-y: 50%;
+    background-position-x: 40%;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 33.33%);
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "logo logo logo" "logo logo logo" "secciones secciones secciones"; }
+    .header__logoHeader {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      margin: auto;
+      grid-area: logo;
+      align-self: center;
+      justify-self: center; }
+      .header__logoHeader .header__imgLogo {
+        height: 100%;
+        width: 100%; }
+    .header__navIndex {
+      height: auto;
+      width: 100%;
+      display: inline-block;
+      grid-area: secciones;
+      align-self: end; }
+      .header__navIndex .header__seccionesIndex {
+        text-transform: none;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        align-content: flex-end;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: nowrap;
+        margin: auto; }
+        .header__navIndex .header__seccionesIndex .header__itemIndex {
+          display: inline-block;
+          font-style: normal;
+          font-weight: bolder;
+          font-family: "Baloo Tammudu 2", cursive;
+          font-size: 25px;
+          color: white;
+          text-align: center;
+          margin: auto; }
+    .header a {
+      text-decoration: none;
+      color: white; }
+  /*
+Main Index
+*/
+  .divMainPromociones {
+    background-color: #ffd9a7;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto; }
+  .divImagenPromociones {
+    height: 65%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto; }
+  .imagenPromociones {
+    height: 95%;
+    width: 95%;
+    border: 10px solid #5a1a00;
+    margin: auto; }
+  .divTextoPromociones {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto; }
+  .tituloPromociones {
+    font-style: normal;
+    font-weight: bolder;
+    font-family: "Baloo Tammudu 2", cursive;
+    font-size: 85px;
+    color: black;
+    text-align: center; }
+  .parrafoPromociones {
+    font-style: normal;
+    font-weight: normal;
+    font-family: "Baloo Tammudu 2", cursive;
+    font-size: 90px;
+    color: black;
+    text-align: center; }
+  .imagenSeparadoraDeDiv {
+    background-image: url(../Imagenes/imagenseparadorados.png);
+    background-size: cover;
+    background-position-y: center;
+    background-position-x: center;
+    height: 100vh; }
+  /*
+    Aca empieza el apartado de historia del index
+    */
+  .divMainHistoria {
+    background-color: #ffd9a7;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto; }
+  .divImagenMainHistoria {
+    height: 60%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto; }
+  .imagenMainHistoria {
+    height: 95%;
+    width: 95%;
+    border: 10px solid #5a1a00; }
+  .divTextoMainHistoria {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto; }
+  .tituloMainHistoria {
+    font-style: normal;
+    font-weight: bolder;
+    font-family: "Baloo Tammudu 2", cursive;
+    font-size: 70px;
+    color: black;
+    text-align: center; }
+  .parrafoMainHistoria {
+    font-style: normal;
+    font-weight: normal;
+    font-family: "Baloo Tammudu 2", cursive;
+    font-size: 30px;
+    color: black;
+    text-align: center; }
+  /*
+        Footer///////////////////////////////////////////
+*/
+  .footer {
+    background-color: #571b00;
+    height: 100%;
+    width: 100%; }
+    .footer .footer-container {
+      height: 100%;
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 33.33%);
+      grid-template-rows: repeat(3, 33%);
+      grid-template-areas: "logo logo logo" "redes redes redes" "secciones secciones secciones";
+      justify-content: center;
+      align-content: center; }
+      .footer .footer-container__logo {
+        grid-area: logo;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        margin: auto;
+        justify-self: center;
+        align-self: center; }
+        .footer .footer-container__logo .footer-container__img {
+          height: 200px;
+          width: 50%;
+          margin: 0%; }
+      .footer .footer-container__redes {
+        grid-area: redes;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: nowrap;
+        margin: 0;
+        padding: 0%; }
+        .footer .footer-container__redes .footer-container__listaRedes {
+          height: 80%;
+          width: 80%;
+          display: flex;
+          flex-direction: row;
+          align-content: center;
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: nowrap;
+          margin: auto; }
+          .footer .footer-container__redes .footer-container__listaRedes .footer-container__itemRedes {
+            height: 100%;
+            width: 50%;
+            display: inline-block;
+            margin: 3%;
+            padding: auto; }
+            .footer .footer-container__redes .footer-container__listaRedes .footer-container__itemRedes .footer-container__iconos {
+              height: 100%;
+              width: 100%; }
+      .footer .footer-container__secciones {
+        grid-area: secciones;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        margin: 0;
+        padding: 0%; }
+        .footer .footer-container__secciones .footer-container__listaSecciones {
+          height: 100%;
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          align-content: center;
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: nowrap;
+          margin: auto; }
+          .footer .footer-container__secciones .footer-container__listaSecciones .footer-container__item {
+            font-style: normal;
+            font-weight: bold;
+            font-family: "Baloo Tammudu 2", cursive;
+            font-size: 25px;
+            color: white;
+            text-align: center;
+            text-transform: none;
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: nowrap;
+            margin: auto;
+            padding: 0%; }
+  /*
+Navbar secciones con BS5
+*/
+  .headerSecciones {
+    background-color: #834019; }
+  .container {
+    background-color: #834019;
+    height: 100%;
+    width: 100%; }
+  .navbar-brand {
+    height: 100%;
+    width: 50%; }
+  .navbar {
+    height: 100%;
+    width: 100%; }
+  .navbar-nav {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    margin: auto; }
+  .logoSecciones {
+    height: 100%;
+    width: 100%; }
+  .itemNav {
+    font-style: normal;
+    font-weight: bolder;
+    font-family: "Baloo Tammudu 2", cursive;
+    font-size: 23px;
+    color: white;
+    text-align: center;
+    display: inline-block; }
+  /*
+Fin navbar con BS
+*/
+  /*
+Pertenece a la pestaña de Menu /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+  .mainMenu {
+    height: 100%;
+    width: 100%;
+    background-color: #ffd9a7;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto; }
+  .tituloMainMenu {
+    font-style: normal;
+    font-weight: bold;
+    font-family: "Baloo Tammudu 2", cursive;
+    font-size: 40px;
+    color: black;
+    text-align: center;
+    padding: 4% 0% 0% 0%; }
+  .losMejoresPlatosMenu {
+    height: 100%;
+    width: 100%;
+    padding: auto;
+    margin: auto; }
+  .ulDelMenu {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: "imagen1 imagen2" "imagen3 imagen4" "imagen5 imagen6" "imagen7 imagen8" "imagen9 imagen9";
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+    padding: 0%; }
+  .listaMenuUno {
+    grid-area: imagen1;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto; }
+  .listaMenuDos {
+    grid-area: imagen4;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto; }
+  .listaMenuTres {
+    grid-area: imagen7;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto; }
+  .listaMenuCuatro {
+    grid-area: imagen9;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto; }
+  .listaMenuCinco {
+    grid-area: imagen8;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto; }
+  .listaMenuSeis {
+    grid-area: imagen3;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto; }
+  .listaMenuSiete {
+    grid-area: imagen2;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto; }
+  .listaMenuOcho {
+    grid-area: imagen5;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto; }
+  .listaMenuNueve {
+    grid-area: imagen6;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto; }
+  .listaMenuUno:hover, .listaMenuDos:hover, .listaMenuTres:hover, .listaMenuCuatro:hover, .listaMenuCinco:hover, .listaMenuSeis:hover, .listaMenuSiete:hover, .listaMenuOcho:hover, .listaMenuNueve:hover {
+    height: 104%;
+    width: 104%;
+    transition: all 1s; }
+  .imagenNumeroUno, .imagenNumeroDos, .imagenNumeroTres, .imagenNumeroCuatro, .imagenNumeroCinco, .imagenNumeroSeis, .imagenNumeroSiete, .imagenNumeroOcho, .imagenNumeroNueve {
+    height: 65%;
+    width: 85%;
+    justify-self: center;
+    align-self: center;
+    border: solid 10px #5a1a00; }
+  .pDelMenu {
+    font-style: normal;
+    font-weight: normal;
+    font-family: "Baloo Tammudu 2", cursive;
+    font-size: 25px;
+    color: black;
+    text-align: center;
+    margin: 0%; }
+  /*
+Pertenece a la pestaña de Reservas /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+  .main-reservas {
+    height: 100%;
+    width: 100%;
+    background-color: #ffd9a7;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto; }
+    .main-reservas .containerReservas {
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      margin: auto;
+      height: 100%;
+      width: 100%; }
+    .main-reservas__titulo {
+      font-style: normal;
+      font-weight: bolder;
+      font-family: "Baloo Tammudu 2", cursive;
+      font-size: 40px;
+      color: black;
+      text-align: center;
+      text-transform: none;
+      padding: 4% 0% 0% 0%;
+      margin: 2%; }
+    .main-reservas__imagen {
+      height: 100%;
+      width: 100%; }
+      .main-reservas__imagen .main-reservas__img {
+        width: 88%;
+        height: 88%;
+        margin: auto;
+        border: 10px solid #5a1a00; }
+    .main-reservas__informacion {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      margin: auto;
+      font-style: normal;
+      font-weight: normal;
+      font-family: "Baloo Tammudu 2", cursive;
+      font-size: 23px;
+      color: black;
+      text-align: center; }
+    .main-reservas .accordion {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding: 5%;
+      height: 100%;
+      width: 100%; }
+    .main-reservas .accordion-item {
+      background-color: transparent;
+      width: 100%; }
+    .main-reservas .accordion-button {
+      background-color: rgba(173, 98, 0, 0.582);
+      font-style: normal;
+      font-weight: normal;
+      font-family: "Baloo Tammudu 2", cursive;
+      font-size: 25px;
+      color: black;
+      text-align: center; }
+  /*
+Pertenece a la pestaña de Contacto /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+  .main-contacto {
+    height: 100%;
+    width: 100%;
+    background-color: #ffd9a7; }
+    .main-contacto__titulo {
+      font-style: normal;
+      font-weight: bolder;
+      font-family: "Baloo Tammudu 2", cursive;
+      font-size: 40px;
+      color: black;
+      text-align: center;
+      text-transform: none;
+      margin: auto;
+      padding: 4% 0% 0% 0%; }
+  .grid-contacto {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr) 50px;
+    grid-template-areas: "api" "informacion"  "formulario" "formulario";
+    row-gap: 0px;
+    justify-content: space-between;
+    align-content: center; }
+    .grid-contacto__api {
+      height: 100%;
+      width: 100%;
+      grid-area: api;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      margin: auto; }
+      .grid-contacto__api .grid-contacto__img {
+        height: 90%;
+        width: 95%;
+        justify-self: center;
+        border: solid 10px #5a1a00; }
+    .grid-contacto__formulario {
+      grid-area: formulario;
+      height: 100%;
+      width: 100%;
+      font-style: normal;
+      font-weight: normal;
+      font-family: "Baloo Tammudu 2", cursive;
+      font-size: 25px;
+      color: black;
+      text-align: center;
+      text-transform: none;
+      padding: 0%;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: nowrap;
+      margin: auto;
+      margin: 15px; }
+      .grid-contacto__formulario .datosPersonalesContacto {
+        height: 100%;
+        width: 100%;
+        font-style: normal;
+        font-weight: bolder;
+        font-family: "Baloo Tammudu 2", cursive;
+        font-size: 35px;
+        color: black;
+        text-align: center;
+        text-transform: none; }
+    .grid-contacto__informacion {
+      grid-area: informacion;
+      height: 100%;
+      width: 100%;
+      font-style: normal;
+      font-weight: normal;
+      font-family: "Baloo Tammudu 2", cursive;
+      font-size: 28px;
+      color: black;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      margin: auto;
+      padding: auto; }
+    .grid-contacto__texto {
+      font-style: normal;
+      font-weight: normal;
+      font-family: "Baloo Tammudu 2", cursive;
+      font-size: 28px;
+      color: black;
+      text-align: center; }
+    .grid-contacto__texto-h2 {
+      font-style: normal;
+      font-weight: bolder;
+      font-family: "Baloo Tammudu 2", cursive;
+      font-size: 35px;
+      color: black;
+      text-align: center; }
+  /*
+Pertenece a la pestaña Preguntas frecuentes /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+  .main-faq {
+    height: 100%;
+    width: 100%;
+    background-color: #ffd9a7;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 45% 50%;
+    grid-template-areas: "titulo" "container" "container2";
+    justify-content: center;
+    align-items: center;
+    align-content: center; }
+    .main-faq__titulo {
+      grid-area: titulo;
+      font-style: normal;
+      font-weight: bolder;
+      font-family: "Baloo Tammudu 2", cursive;
+      font-size: 40px;
+      color: black;
+      text-align: center;
+      text-transform: none;
+      padding: 4% 0% 0% 0%;
+      align-self: center;
+      justify-self: center; }
+    .main-faq__primer-container {
+      grid-area: container;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: nowrap;
+      margin: auto;
+      padding: 3% 3% 0% 3%; }
+    .main-faq__segundo-container {
+      grid-area: container2;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: nowrap;
+      margin: auto;
+      padding: 3% 3% 0% 3%; }
+    .main-faq__preguntas {
+      font-style: normal;
+      font-weight: bolder;
+      font-family: "Baloo Tammudu 2", cursive;
+      font-size: 28px;
+      color: black;
+      text-align: center; }
+    .main-faq__respuestas {
+      font-style: normal;
+      font-weight: normal;
+      font-family: "Baloo Tammudu 2", cursive;
+      font-size: 23px;
+      color: black;
+      text-align: center;
+      padding: 0%; }
+  /*
+Pertenece a la pestaña Quienessomos.html /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+  .main-qs {
+    height: 100%;
+    background-color: #ffd9a7;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto; }
+    .main-qs .container-qs {
+      flex-direction: column;
+      align-content: center;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: nowrap;
+      margin: auto; }
+    .main-qs__titulo {
+      font-style: normal;
+      font-weight: bolder;
+      font-family: "Baloo Tammudu 2", cursive;
+      font-size: 40px;
+      color: black;
+      text-align: center;
+      text-transform: none;
+      grid-area: titulo;
+      padding: 4% 0% 0% 0%; }
+    .main-qs__imgs {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      margin: auto; }
+      .main-qs__imgs .main-qs__img {
+        height: 95%;
+        width: 95%;
+        margin: auto;
+        border: 5px solid #5a1a00; }
+    .main-qs__texto {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      margin: auto; }
+      .main-qs__texto .main-qs__h2 {
+        font-style: normal;
+        font-weight: bolder;
+        font-family: "Baloo Tammudu 2", cursive;
+        font-size: 35px;
+        color: black;
+        text-align: center;
+        text-transform: none;
+        padding: 4% 0% 0% 0%; }
+      .main-qs__texto .main-qs__p {
+        font-style: normal;
+        font-weight: normal;
+        font-family: "Baloo Tammudu 2", cursive;
+        font-size: 25px;
+        color: black;
+        text-align: center;
+        padding: 2%; } }
+
+/*
+Un poco mas grande que tablets (Laptops, notebooks) //////////////////////////////////////////////////////////////////////////////////////////////    
+*/
+@media only screen and (min-width: 992px) {
+  .header {
+    background-image: url(../Imagenes/imagenindexdos.png);
+    background-size: cover;
+    background-position-y: 50%;
+    background-position-x: 40%;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 33.33%);
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "logo logo logo" "logo logo logo" "secciones secciones secciones"; }
+    .header a {
+      text-decoration: none;
+      color: white; }
+    .header__logoHeader {
+      height: 110%;
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      margin: auto;
+      grid-area: logo; }
+      .header__logoHeader .header__imgLogo {
+        height: 100%;
+        width: 100%; }
+    .header__navIndex {
+      height: auto;
+      width: 100%;
+      display: inline-block;
+      grid-area: secciones;
+      align-self: end;
+      margin: 2% 0% 2% 0%; }
+      .header__navIndex .header__seccionesIndex {
+        text-transform: none;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        align-content: flex-end;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: nowrap;
+        margin: auto; }
+        .header__navIndex .header__seccionesIndex .header__itemIndex {
+          font-style: normal;
+          font-weight: bolder;
+          font-family: "Baloo Tammudu 2", cursive;
+          font-size: 35px;
+          color: white;
+          text-align: center;
+          display: inline-block;
+          margin: 0% 1% 0% 1%; }
+  /*
+Main Index
+*/
+  .divMainPromociones {
+    background-color: #ffd9a7;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto; }
+  .divImagenPromociones {
+    height: 60%;
+    width: 100%;
+    margin: 2%; }
+  .imagenPromociones {
+    height: 100%;
+    width: 100%;
+    border: 10px solid #5a1a00;
+    margin: 0%; }
+  .divTextoPromociones {
+    height: 100%;
+    width: 100%;
+    margin: 0%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column; }
+  .tituloPromociones {
+    font-style: normal;
+    font-weight: bolder;
+    font-family: "Baloo Tammudu 2", cursive;
+    font-size: 80px;
+    color: black;
+    text-align: center; }
+  .parrafoPromociones {
+    font-style: normal;
+    font-weight: normal;
+    font-family: "Baloo Tammudu 2", cursive;
+    font-size: 60px;
+    color: black;
+    text-align: center; }
+  .imagenSeparadoraDeDiv {
+    background-image: url(../Imagenes/imagenseparadorados.png);
+    background-size: cover;
+    background-position-y: center;
+    background-position-x: center;
+    height: 100vh;
+    width: 100%; }
+  /*
+    Aca empieza el apartado de historia del index
+    */
+  .divMainHistoria {
+    background-color: #ffd9a7;
+    height: 100vh;
+    width: 100%;
+    flex-direction: row-reverse;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto;
+    display: flex; }
+  .divImagenMainHistoria {
+    height: 55%;
+    width: 100%;
+    margin: 5% 5% 5% 2%; }
+  .imagenMainHistoria {
+    height: 100%;
+    width: 100%;
+    border: 10px solid #5a1a00; }
+  .divTextoMainHistoria {
+    justify-content: center;
+    align-content: center;
+    margin: 2% 2% 2% 2%;
+    width: 90%; }
+  .tituloMainHistoria {
+    font-style: normal;
+    font-weight: bolder;
+    font-family: "Baloo Tammudu 2", cursive;
+    font-size: 50px;
+    color: black;
+    text-align: center; }
+  .parrafoMainHistoria {
+    font-style: normal;
+    font-weight: normal;
+    font-family: "Baloo Tammudu 2", cursive;
+    font-size: 25px;
+    color: black;
+    text-align: center; }
+  /*
+        Footer///////////////////////////////////////////
+*/
+  .footer {
+    background-color: #571b00;
+    height: 100%;
+    width: 100%; }
+    .footer .footer-container {
+      display: grid;
+      grid-template-columns: 500px 1fr 300px;
+      grid-template-rows: repeat(2, 50%);
+      grid-template-areas: "logo redes secciones" "logo redes secciones";
+      justify-content: center;
+      justify-items: center; }
+      .footer .footer-container__logo {
+        grid-area: logo;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        margin: auto; }
+        .footer .footer-container__logo .footer-container__img {
+          height: 85%;
+          width: 80%;
+          padding: 0%;
+          margin: auto; }
+      .footer .footer-container__redes {
+        grid-area: redes;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        margin: auto; }
+        .footer .footer-container__redes .footer-container__listaRedes {
+          height: 100%;
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          align-content: center;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: nowrap;
+          margin: auto;
+          padding: 0%; }
+          .footer .footer-container__redes .footer-container__listaRedes .footer-container__itemRedes {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: nowrap;
+            margin: auto; }
+            .footer .footer-container__redes .footer-container__listaRedes .footer-container__itemRedes .footer-container__iconos {
+              height: 60%;
+              width: 60%;
+              display: flex;
+              flex-direction: row;
+              align-content: center;
+              justify-content: center;
+              align-items: center;
+              flex-wrap: nowrap;
+              margin: auto; }
+      .footer .footer-container__secciones {
+        grid-area: secciones;
+        height: auto;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: nowrap;
+        margin: auto; }
+        .footer .footer-container__secciones .footer-container__listaSecciones {
+          height: auto;
+          width: auto;
+          display: flex;
+          flex-direction: column;
+          align-content: center;
+          justify-content: space-evenly;
+          align-items: center;
+          flex-wrap: nowrap;
+          margin: auto; }
+          .footer .footer-container__secciones .footer-container__listaSecciones .footer-container__item {
+            font-style: normal;
+            font-weight: bold;
+            font-family: "Baloo Tammudu 2", cursive;
+            font-size: 20px;
+            color: white;
+            text-align: center;
+            text-transform: none;
+            padding-top: 10%;
+            display: inline-block; }
+  /*
+Navbar secciones con BS5
+*/
+  .headerSecciones {
+    background-color: #834019; }
+  .container {
+    background-color: #834019;
+    width: 100%; }
+  .navbar-brand {
+    height: 100%;
+    width: 50%; }
+  .navbar {
+    width: 100%;
+    height: 100%; }
+  .navbar-nav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: space-between; }
+  .logoSecciones {
+    width: 55%;
+    height: 55%; }
+  .itemNav {
+    font-style: normal;
+    font-weight: bold;
+    font-family: "Baloo Tammudu 2", cursive;
+    font-size: 27px;
+    color: white;
+    text-align: center;
+    text-transform: none;
+    display: flex;
+    flex-wrap: nowrap; }
+  /*
+Fin navbar con BS
+*/
+  .mainMenu {
+    height: 100%;
+    width: 100%;
+    background-color: #ffd9a7;
+    margin: 0%; }
+  .tituloMainMenu {
+    font-style: normal;
+    font-weight: bolder;
+    font-family: "Baloo Tammudu 2", cursive;
+    font-size: 40px;
+    color: black;
+    text-align: center;
+    padding: 4%; }
+  .losMejoresPlatosMenu {
+    height: 100%;
+    width: 100%;
+    padding: 3%; }
+  .ulDelMenu {
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    grid-template-rows: repeat(3, 33%);
+    grid-template-areas: "imagen1 imagen2 imagen3" "imagen4 imagen5 imagen6" "imagen7 imagen8 imagen9";
+    justify-content: center;
+    align-content: center;
+    row-gap: 2%;
+    column-gap: 2%; }
+  .listaMenuUno {
+    grid-area: imagen1;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto;
+    margin: 0%;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column; }
+  .listaMenuDos {
+    grid-area: imagen4;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto; }
+  .listaMenuTres {
+    grid-area: imagen7;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto; }
+  .listaMenuCuatro {
+    grid-area: imagen9;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto; }
+  .listaMenuCinco {
+    grid-area: imagen8;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto; }
+  .listaMenuSeis {
+    grid-area: imagen3;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto; }
+  .listaMenuSiete {
+    grid-area: imagen2;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto; }
+  .listaMenuOcho {
+    grid-area: imagen5;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto; }
+  .listaMenuNueve {
+    grid-area: imagen6;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto; }
+  .listaMenuUno:hover, .listaMenuDos:hover, .listaMenuTres:hover, .listaMenuCuatro:hover, .listaMenuCinco:hover {
+    width: 115%;
+    height: 115%;
+    transition: all 1s; }
+  .imagenNumeroUno, .imagenNumeroDos, .imagenNumeroTres, .imagenNumeroCuatro, .imagenNumeroCinco, .imagenNumeroSeis, .imagenNumeroSiete, .imagenNumeroOcho, .imagenNumeroNueve {
+    height: 80%;
+    width: 80%;
+    justify-self: center;
+    align-self: center;
+    border: solid 10px #5a1a00; }
+  .pDelMenu {
+    font-style: normal;
+    font-weight: normal;
+    font-family: "Baloo Tammudu 2", cursive;
+    font-size: 23px;
+    color: black;
+    text-align: center;
+    margin: auto; }
+  /*
+Pertenece a la pestaña de Reservas /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+  .main-reservas {
+    height: 100vh;
+    width: 100%;
+    background-color: #ffd9a7; }
+    .main-reservas .containerReservas {
+      height: 85%;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      margin: auto;
+      padding: 2%; }
+    .main-reservas__titulo {
+      font-style: normal;
+      font-weight: bold;
+      font-family: "Baloo Tammudu 2", cursive;
+      font-size: 40px;
+      color: black;
+      text-align: center;
+      text-transform: none;
+      padding: 0; }
+    .main-reservas__imagen {
+      height: 100%;
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      margin: auto; }
+      .main-reservas__imagen .main-reservas__img {
+        height: 100%;
+        width: 100%;
+        margin: auto;
+        border: 10px solid #5a1a00; }
+    .main-reservas__informacion {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      flex-direction: column;
+      width: 47%;
+      height: 100%; }
+    .main-reservas .accordion {
+      height: 100%;
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-content: center; }
+    .main-reservas .accordion-item {
+      background-color: transparent;
+      font-style: normal;
+      font-weight: normal;
+      font-family: "Baloo Tammudu 2", cursive;
+      font-size: 20px;
+      color: black;
+      text-align: center; }
+    .main-reservas .accordion-button {
+      background-color: rgba(173, 98, 0, 0.582) !important;
+      font-style: normal;
+      font-weight: normal;
+      font-family: "Baloo Tammudu 2", cursive;
+      font-size: 23px;
+      color: black;
+      text-align: center; }
+  /*
+Pertenece a la pestaña de Contacto /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+  .main-contacto {
+    height: 100%;
+    width: 100%;
+    background-color: #ffd9a7; }
+    .main-contacto__titulo {
+      font-style: normal;
+      font-weight: bold;
+      font-family: "Baloo Tammudu 2", cursive;
+      font-size: 40px;
+      color: black;
+      text-align: center;
+      text-transform: none;
+      margin: auto;
+      padding: 2%; }
+  .grid-contacto {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 50% 50%;
+    grid-template-areas: "api api" "formulario informacion";
+    row-gap: 5px;
+    justify-content: space-between;
+    align-content: center; }
+    .grid-contacto__api {
+      height: 100%;
+      width: 95%;
+      margin: auto;
+      grid-area: api;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .grid-contacto__api .grid-contacto__img {
+        height: 100%;
+        width: 100%;
+        justify-self: center;
+        border: solid 7px #5a1a00; }
+    .grid-contacto__formulario {
+      height: 100%;
+      width: 100%;
+      font-style: normal;
+      font-weight: normal;
+      font-family: "Baloo Tammudu 2", cursive;
+      font-size: 20px;
+      color: black;
+      text-align: center;
+      text-transform: none;
+      grid-area: formulario;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      margin: auto;
+      padding: 5%; }
+      .grid-contacto__formulario .datosPersonalesContacto {
+        font-style: normal;
+        font-weight: bolder;
+        font-family: "Baloo Tammudu 2", cursive;
+        font-size: 30px;
+        color: black;
+        text-align: center;
+        text-transform: none; }
+    .grid-contacto__informacion {
+      grid-area: informacion;
+      height: min-content;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      justify-items: center;
+      align-content: center;
+      justify-content: center; }
+    .grid-contacto__texto-h2 {
+      font-style: normal;
+      font-weight: bolder;
+      font-family: "Baloo Tammudu 2", cursive;
+      font-size: 35px;
+      color: black;
+      text-align: center; }
+    .grid-contacto__texto {
+      font-style: normal;
+      font-weight: normal;
+      font-family: "Baloo Tammudu 2", cursive;
+      font-size: 25px;
+      color: black;
+      text-align: center; }
+  /*
+Pertenece a la pestaña Preguntas frecuentes /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+  .main-faq {
+    height: 100%;
+    width: 100%;
+    background-color: #ffd9a7;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: 150px repeat(2, 40%);
+    grid-template-areas: "titulo titulo" "container container2" "container container2";
+    justify-content: center;
+    align-items: center;
+    align-content: center; }
+    .main-faq__titulo {
+      font-style: normal;
+      font-weight: bolder;
+      font-family: "Baloo Tammudu 2", cursive;
+      font-size: 40px;
+      color: black;
+      text-align: center;
+      text-transform: none;
+      grid-area: titulo;
+      padding: 2% 2% 2% 2%; }
+    .main-faq__primer-container {
+      grid-area: container;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: nowrap;
+      margin: auto;
+      padding: 0% 7% 0% 5%; }
+    .main-faq__segundo-container {
+      grid-area: container2;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: nowrap;
+      margin: auto;
+      padding: 0% 7% 0% 5%; }
+    .main-faq__preguntas {
+      font-style: normal;
+      font-weight: bolder;
+      font-family: "Baloo Tammudu 2", cursive;
+      font-size: 35px;
+      color: black;
+      text-align: center; }
+    .main-faq__respuestas {
+      font-style: normal;
+      font-weight: normal;
+      font-family: "Baloo Tammudu 2", cursive;
+      font-size: 25px;
+      color: black;
+      text-align: center; }
+  /*
+PESTAÑA QUIENES SOMOS //////////////////////////////////////////////////////////////////////////////////////////////
+*/
+  .main-qs {
+    height: 100vh;
+    width: 100%;
+    background-color: #ffd9a7;
+    display: flex; }
+    .main-qs__titulo {
+      font-style: normal;
+      font-weight: bolder;
+      font-family: "Baloo Tammudu 2", cursive;
+      font-size: 40px;
+      color: black;
+      text-align: center;
+      text-transform: none;
+      padding: 2% 2% 1% 2%; }
+    .main-qs .container-qs {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      margin: auto; }
+    .main-qs__imgs {
+      height: 100%;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      margin: auto; }
+      .main-qs__imgs .main-qs__img {
+        height: 60%;
+        width: 90%;
+        margin: 5% 5% 5% 8%;
+        border: 10px solid #5a1a00; }
+    .main-qs__texto {
+      height: 100%;
+      width: 47%;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: nowrap;
+      margin: auto; }
+      .main-qs__texto .main-qs__h2 {
+        font-style: normal;
+        font-weight: bolder;
+        font-family: "Baloo Tammudu 2", cursive;
+        font-size: 25px;
+        color: black;
+        text-align: center;
+        text-transform: none; }
+      .main-qs__texto .main-qs__p {
+        font-style: normal;
+        font-weight: normal;
+        font-family: "Baloo Tammudu 2", cursive;
+        font-size: 18px;
+        color: black;
+        text-align: center; } }
+
+/*
+//////////////////////////////////// MONITORES////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+@media only screen and (min-width: 1200px) {
+  .header {
+    background-image: url(../Imagenes/imagenindexdos.png);
+    background-size: cover;
+    background-position-y: 50%;
+    background-position-x: 40%;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 33.33%);
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "logo logo logo" "logo logo logo" "secciones secciones secciones"; }
+    .header a {
+      text-decoration: none;
+      color: white; }
+    .header__logoHeader {
+      height: 110%;
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      margin: auto;
+      grid-area: logo; }
+      .header__logoHeader .header__imgLogo {
+        height: 100%;
+        width: 100%; }
+    .header__navIndex {
+      height: auto;
+      width: 100%;
+      display: inline-block;
+      grid-area: secciones;
+      align-self: end;
+      margin: 2% 0% 2% 0%; }
+      .header__navIndex .header__seccionesIndex {
+        text-transform: none;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        align-content: flex-end;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: nowrap;
+        margin: auto; }
+        .header__navIndex .header__seccionesIndex .header__itemIndex {
+          font-style: normal;
+          font-weight: bolder;
+          font-family: "Baloo Tammudu 2", cursive;
+          font-size: 35px;
+          color: white;
+          text-align: center;
+          display: inline-block;
+          margin: 0% 1% 0% 1%; }
+  /*
+    Main Index
+    */
+  .divMainPromociones {
+    background-color: #ffd9a7;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto; }
+  .divImagenPromociones {
+    height: 85%;
+    width: 100%;
+    margin: 2%; }
+  .imagenPromociones {
+    height: 100%;
+    width: 100%;
+    border: 10px solid #5a1a00;
+    margin: 0%; }
+  .divTextoPromociones {
+    height: 100%;
+    width: 100%;
+    margin: 0%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column; }
+  .tituloPromociones {
+    font-style: normal;
+    font-weight: bolder;
+    font-family: "Baloo Tammudu 2", cursive;
+    font-size: 100px;
+    color: black;
+    text-align: center; }
+  .parrafoPromociones {
+    font-style: normal;
+    font-weight: normal;
+    font-family: "Baloo Tammudu 2", cursive;
+    font-size: 100px;
+    color: black;
+    text-align: center; }
+  .imagenSeparadoraDeDiv {
+    background-image: url(../Imagenes/imagenseparadorados.png);
+    background-size: cover;
+    background-position-y: center;
+    background-position-x: center;
+    height: 100vh;
+    width: 100%; }
+  /*
+        Aca empieza el apartado de historia del index
+        */
+  .divMainHistoria {
+    background-color: #ffd9a7;
+    height: 100vh;
+    width: 100%;
+    flex-direction: row-reverse;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto;
+    display: flex; }
+  .divImagenMainHistoria {
+    height: 75%;
+    width: 100%;
+    margin: 5% 5% 5% 2%; }
+  .imagenMainHistoria {
+    height: 100%;
+    width: 100%;
+    border: 10px solid #5a1a00; }
+  .divTextoMainHistoria {
+    justify-content: center;
+    align-content: center;
+    margin: 2% 2% 2% 2%;
+    width: 90%; }
+  .tituloMainHistoria {
+    font-style: normal;
+    font-weight: bolder;
+    font-family: "Baloo Tammudu 2", cursive;
+    font-size: 70px;
+    color: black;
+    text-align: center; }
+  .parrafoMainHistoria {
+    font-style: normal;
+    font-weight: normal;
+    font-family: "Baloo Tammudu 2", cursive;
+    font-size: 30px;
+    color: black;
+    text-align: center; }
+  /*
+            Footer///////////////////////////////////////////
+    */
+  .footer {
+    background-color: #571b00;
+    height: 100%;
+    width: 100%; }
+    .footer .footer-container {
+      display: grid;
+      grid-template-columns: 500px 1fr 300px;
+      grid-template-rows: repeat(2, 50%);
+      grid-template-areas: "logo redes secciones" "logo redes secciones";
+      justify-content: center;
+      justify-items: center; }
+      .footer .footer-container__logo {
+        grid-area: logo;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        margin: auto; }
+        .footer .footer-container__logo .footer-container__img {
+          height: 100%;
+          width: 100%;
+          padding: 0%;
+          margin: auto; }
+      .footer .footer-container__redes {
+        grid-area: redes;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        margin: auto; }
+        .footer .footer-container__redes .footer-container__listaRedes {
+          height: 100%;
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          align-content: center;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: nowrap;
+          margin: auto;
+          padding: 0%; }
+          .footer .footer-container__redes .footer-container__listaRedes .footer-container__itemRedes {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: nowrap;
+            margin: auto; }
+            .footer .footer-container__redes .footer-container__listaRedes .footer-container__itemRedes .footer-container__iconos {
+              height: 60%;
+              width: 60%;
+              display: flex;
+              flex-direction: row;
+              align-content: center;
+              justify-content: center;
+              align-items: center;
+              flex-wrap: nowrap;
+              margin: auto; }
+      .footer .footer-container__secciones {
+        grid-area: secciones;
+        height: auto;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: nowrap;
+        margin: auto; }
+        .footer .footer-container__secciones .footer-container__listaSecciones {
+          height: auto;
+          width: auto;
+          display: flex;
+          flex-direction: column;
+          align-content: center;
+          justify-content: space-evenly;
+          align-items: center;
+          flex-wrap: nowrap;
+          margin: auto; }
+          .footer .footer-container__secciones .footer-container__listaSecciones .footer-container__item {
+            font-style: normal;
+            font-weight: bold;
+            font-family: "Baloo Tammudu 2", cursive;
+            font-size: 25px;
+            color: white;
+            text-align: center;
+            text-transform: none;
+            padding-top: 10%;
+            display: inline-block; }
+  /*
+Navbar secciones con BS5
+*/
+  .headerSecciones {
+    background-color: #834019; }
+  .container {
+    background-color: #834019;
+    width: 100%; }
+  .navbar-brand {
+    height: 100%;
+    width: 50%; }
+  .navbar {
+    width: 100%;
+    height: 100%; }
+  .navbar-nav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: space-between; }
+  .logoSecciones {
+    width: 55%;
+    height: 55%; }
+  .itemNav {
+    font-style: normal;
+    font-weight: bold;
+    font-family: "Baloo Tammudu 2", cursive;
+    font-size: 27px;
+    color: white;
+    text-align: center;
+    text-transform: none;
+    display: flex;
+    flex-wrap: nowrap; }
+  /*
+Fin navbar con BS
+*/
+  .mainMenu {
+    height: 100%;
+    width: 100%;
+    background-color: #ffd9a7;
+    margin: 0%; }
+  .tituloMainMenu {
+    font-style: normal;
+    font-weight: bolder;
+    font-family: "Baloo Tammudu 2", cursive;
+    font-size: 40px;
+    color: black;
+    text-align: center;
+    padding: 2% 0% 0% 0%; }
+  .losMejoresPlatosMenu {
+    height: 100%;
+    width: 100%;
+    padding: auto; }
+  .ulDelMenu {
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    grid-template-rows: repeat(3, 33%);
+    grid-template-areas: "imagen1 imagen2 imagen3" "imagen4 imagen5 imagen6" "imagen7 imagen8 imagen9";
+    justify-content: center;
+    align-content: center;
+    row-gap: 2%;
+    column-gap: 2%; }
+  .listaMenuUno {
+    grid-area: imagen1;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto;
+    margin: 0%;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column; }
+  .listaMenuDos {
+    grid-area: imagen4;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto; }
+  .listaMenuTres {
+    grid-area: imagen7;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto; }
+  .listaMenuCuatro {
+    grid-area: imagen9;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto; }
+  .listaMenuCinco {
+    grid-area: imagen8;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto; }
+  .listaMenuSeis {
+    grid-area: imagen3;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto; }
+  .listaMenuSiete {
+    grid-area: imagen2;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto; }
+  .listaMenuOcho {
+    grid-area: imagen5;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto; }
+  .listaMenuNueve {
+    grid-area: imagen6;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto; }
+  .listaMenuUno:hover, .listaMenuDos:hover, .listaMenuTres:hover, .listaMenuCuatro:hover, .listaMenuCinco:hover {
+    width: 115%;
+    height: 115%;
+    transition: all 1s; }
+  .imagenNumeroUno, .imagenNumeroDos, .imagenNumeroTres, .imagenNumeroCuatro, .imagenNumeroCinco, .imagenNumeroSeis, .imagenNumeroSiete, .imagenNumeroOcho, .imagenNumeroNueve {
+    height: 80%;
+    width: 80%;
+    justify-self: center;
+    align-self: center;
+    border: solid 10px #5a1a00; }
+  .pDelMenu {
+    font-style: normal;
+    font-weight: normal;
+    font-family: "Baloo Tammudu 2", cursive;
+    font-size: 23px;
+    color: black;
+    text-align: center;
+    margin: auto; }
+  /*
+Pertenece a la pestaña de Reservas /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+  .main-reservas {
+    height: 100vh;
+    width: 100%;
+    background-color: #ffd9a7; }
+    .main-reservas .containerReservas {
+      height: 80%;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      margin: auto;
+      padding: 2%; }
+    .main-reservas__titulo {
+      font-style: normal;
+      font-weight: bold;
+      font-family: "Baloo Tammudu 2", cursive;
+      font-size: 40px;
+      color: black;
+      text-align: center;
+      text-transform: none;
+      padding: 0; }
+    .main-reservas__imagen {
+      height: 100%;
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      margin: auto; }
+      .main-reservas__imagen .main-reservas__img {
+        height: 100%;
+        width: 80%;
+        margin: auto;
+        border: 10px solid #5a1a00; }
+    .main-reservas__informacion {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      flex-direction: column;
+      width: 47%;
+      height: 100%; }
+    .main-reservas .accordion {
+      height: 100%;
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-content: center; }
+    .main-reservas .accordion-item {
+      background-color: transparent;
+      font-style: normal;
+      font-weight: normal;
+      font-family: "Baloo Tammudu 2", cursive;
+      font-size: 17px;
+      color: black;
+      text-align: center; }
+    .main-reservas .accordion-button {
+      background-color: rgba(173, 98, 0, 0.582) !important;
+      font-style: normal;
+      font-weight: normal;
+      font-family: "Baloo Tammudu 2", cursive;
+      font-size: 23px;
+      color: black;
+      text-align: center; }
+  /*
+Pertenece a la pestaña de Contacto /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+  .main-contacto {
+    height: 100%;
+    width: 100%;
+    background-color: #ffd9a7; }
+    .main-contacto__titulo {
+      font-style: normal;
+      font-weight: bold;
+      font-family: "Baloo Tammudu 2", cursive;
+      font-size: 40px;
+      color: black;
+      text-align: center;
+      text-transform: none;
+      margin: auto;
+      padding: 2%; }
+  .grid-contacto {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 50% 50%;
+    grid-template-areas: "api api" "formulario informacion";
+    row-gap: 5px;
+    justify-content: space-between;
+    align-content: center; }
+    .grid-contacto__api {
+      height: 100%;
+      width: 95%;
+      margin: auto;
+      grid-area: api;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .grid-contacto__api .grid-contacto__img {
+        height: 100%;
+        width: 100%;
+        justify-self: center;
+        border: solid 7px #5a1a00; }
+    .grid-contacto__formulario {
+      height: 100%;
+      width: 100%;
+      font-style: normal;
+      font-weight: normal;
+      font-family: "Baloo Tammudu 2", cursive;
+      font-size: 20px;
+      color: black;
+      text-align: center;
+      text-transform: none;
+      grid-area: formulario;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      margin: auto;
+      padding: 5%; }
+      .grid-contacto__formulario .datosPersonalesContacto {
+        font-style: normal;
+        font-weight: bolder;
+        font-family: "Baloo Tammudu 2", cursive;
+        font-size: 30px;
+        color: black;
+        text-align: center;
+        text-transform: none; }
+    .grid-contacto__informacion {
+      grid-area: informacion;
+      height: min-content;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      justify-items: center;
+      align-content: center;
+      justify-content: center; }
+    .grid-contacto__texto-h2 {
+      font-style: normal;
+      font-weight: bolder;
+      font-family: "Baloo Tammudu 2", cursive;
+      font-size: 35px;
+      color: black;
+      text-align: center; }
+    .grid-contacto__texto {
+      font-style: normal;
+      font-weight: normal;
+      font-family: "Baloo Tammudu 2", cursive;
+      font-size: 25px;
+      color: black;
+      text-align: center; }
+  /*
+Pertenece a la pestaña Preguntas frecuentes /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+  .main-faq {
+    height: 100%;
+    width: 100%;
+    background-color: #ffd9a7;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: 150px repeat(2, 40%);
+    grid-template-areas: "titulo titulo" "container container2" "container container2";
+    justify-content: center;
+    align-items: center;
+    align-content: center; }
+    .main-faq__titulo {
+      font-style: normal;
+      font-weight: bolder;
+      font-family: "Baloo Tammudu 2", cursive;
+      font-size: 40px;
+      color: black;
+      text-align: center;
+      text-transform: none;
+      grid-area: titulo;
+      padding: 2% 2% 2% 2%; }
+    .main-faq__primer-container {
+      grid-area: container;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: nowrap;
+      margin: auto;
+      padding: 0% 7% 0% 5%; }
+    .main-faq__segundo-container {
+      grid-area: container2;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: nowrap;
+      margin: auto;
+      padding: 0% 7% 0% 5%; }
+    .main-faq__preguntas {
+      font-style: normal;
+      font-weight: bolder;
+      font-family: "Baloo Tammudu 2", cursive;
+      font-size: 35px;
+      color: black;
+      text-align: center; }
+    .main-faq__respuestas {
+      font-style: normal;
+      font-weight: normal;
+      font-family: "Baloo Tammudu 2", cursive;
+      font-size: 25px;
+      color: black;
+      text-align: center; }
+  /*
+PESTAÑA QUIENES SOMOS //////////////////////////////////////////////////////////////////////////////////////////////
+*/
+  .main-qs {
+    height: 100vh;
+    width: 100%;
+    background-color: #ffd9a7; }
+    .main-qs__titulo {
+      font-style: normal;
+      font-weight: bolder;
+      font-family: "Baloo Tammudu 2", cursive;
+      font-size: 40px;
+      color: black;
+      text-align: center;
+      text-transform: none;
+      padding: 2% 2% 1% 2%; }
+    .main-qs .container-qs {
+      display: flex;
+      flex-direction: row;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      margin: auto; }
+    .main-qs__imgs {
+      height: 100%;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      margin: auto; }
+      .main-qs__imgs .main-qs__img {
+        height: 90%;
+        width: 90%;
+        margin: 5% 5% 5% 8%;
+        border: 10px solid #5a1a00; }
+    .main-qs__texto {
+      height: 100%;
+      width: 47%;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: nowrap;
+      margin: auto; }
+      .main-qs__texto .main-qs__h2 {
+        font-style: normal;
+        font-weight: bolder;
+        font-family: "Baloo Tammudu 2", cursive;
+        font-size: 30px;
+        color: black;
+        text-align: center;
+        text-transform: none; }
+      .main-qs__texto .main-qs__p {
+        font-style: normal;
+        font-weight: normal;
+        font-family: "Baloo Tammudu 2", cursive;
+        font-size: 20px;
+        color: black;
+        text-align: center; } }

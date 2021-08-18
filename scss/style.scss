@@ -1,0 +1,3239 @@
+$sizeTitulos : 40px;
+$sizeTitulosCelulares : 25px;
+$sizeTitulosTablets : 40px;
+$colorPadding : rgb(90, 26, 0);
+$colorFondo : rgb(255, 217, 167);
+$colorFooter : rgb(87, 27, 0);
+$colorNav : rgb(131, 64, 25);
+$paddingTituloCelulares : 4% 0% 0% 0%;
+$font-family : 'Baloo Tammudu 2', cursive;
+$borderPx : 4px;
+
+
+/*
+Mixins.
+*/
+
+@mixin displayFlex($flexDirection , $alignContent , $justifyContent , $alignItems , $flexWrap ,  $margin) {
+    flex-direction: $flexDirection;
+    align-content: $alignContent;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+    flex-wrap: $flexWrap;
+    margin: $margin;
+}
+
+@mixin sizes($height , $width){
+    height: $height;
+    width: $width;
+}
+
+@mixin fontValues($style , $weight , $family , $size , $color , $textAlign ){
+    font-style: $style;
+    font-weight: $weight;
+    font-family: $family;
+    font-size: $size;
+    color: $color;
+    text-align: $textAlign;
+}
+
+/*Reseteo del CSS ,links con color y sin estilo y listas sin estilo./////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+li{
+    list-style: none;
+}
+
+/*
+Pertenece a la pestaña index.html /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+
+/*
+ACA EMPIEZA EL HEADER DEL INDEX
+*/
+.header{
+    background-image: url(../Imagenes/imagenindexdos.png);
+    background-size: cover;
+    background-position-y: 50%;
+    background-position-x: 40%;
+    @include sizes(100vh,100%);
+    display: grid;
+    grid-template-columns: repeat(3 ,33.33%);
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:"logo logo logo"
+                        "logo logo logo"
+                        "secciones secciones secciones";
+
+        a{
+        text-decoration: none;
+        color: white;
+            }
+    
+    &__logoHeader{
+        @include sizes(110%, 90%);
+        display: flex;
+        @include displayFlex(column, center , center , center , nowrap, auto);
+        grid-area: logo;
+
+        .header__imgLogo{
+            @include sizes(100%,100%)
+        }
+    }
+
+    &__navIndex{
+        @include sizes(auto, 100%);
+        display: inline-block;
+        grid-area: secciones;
+        align-self: end;
+        margin: 2% 0% 2% 0%;
+
+        .header__seccionesIndex{
+            text-transform: none;
+            list-style: none;
+            display:flex;
+            @include displayFlex(row,flex-end ,space-around ,center , nowrap ,auto);
+
+            .header__itemIndex{
+                @include fontValues(normal, bolder , $font-family , 35px , white , center);
+                display: inline-block;
+                margin: 0% 1% 0% 1%;
+            }
+        }
+    }
+}
+
+
+/*
+Main Index
+*/
+.divMainPromociones{
+    background-color: $colorFondo;
+    @include sizes(100vh, 100%);
+    display: flex;
+    @include displayFlex(row , center , center , center , nowrap , auto);
+}
+
+.divImagenPromociones{
+    @include sizes(85%, 100%);
+    margin: 2%;
+}
+
+.imagenPromociones{
+    @include sizes(100%, 100%);
+    border: 10px solid $colorPadding;
+    margin: 0%;
+}
+
+.divTextoPromociones{
+    @include sizes(100%,100%);
+    margin: 0%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.tituloPromociones{
+    @include fontValues(normal, bolder , $font-family , 100px , black , center);
+}
+
+.parrafoPromociones{
+    @include fontValues(normal, normal , $font-family , 100px , black , center);
+}
+
+
+.imagenSeparadoraDeDiv{
+    background-image: url(../Imagenes/imagenseparadorados.png);
+    background-size: cover;
+    background-position-y: center;
+    background-position-x: center;
+    @include sizes(100vh,100%)
+}
+/*
+Aca empieza el apartado de historia del index
+*/
+.divMainHistoria{
+    background-color: $colorFondo;
+    @include sizes(100vh, 100%);
+    @include displayFlex(row-reverse, center , center , center , nowrap, auto );
+    display: flex;
+}
+
+.divImagenMainHistoria{
+    @include sizes(75%,100%);
+    margin: 5% 5% 5% 2%;
+}
+
+.imagenMainHistoria{
+    @include sizes(100%,100%);
+    border: 10px solid $colorPadding;
+}
+
+.divTextoMainHistoria{
+    justify-content: center;
+    align-content: center;
+    margin: 2% 2% 2% 2% ;
+    width: 90%;
+}
+
+.tituloMainHistoria{
+    @include fontValues(normal , bolder , $font-family , 70px , black , center );
+}
+
+.parrafoMainHistoria{
+    @include fontValues(normal, normal , $font-family , 30px , black , center );
+}
+
+/*
+    Footer///////////////////////////////////////////
+*/
+.footer{
+    background-color: $colorFooter;
+    height: 100%;
+    width: 100%;
+    
+.footer-container{
+    display: grid;
+    grid-template-columns: 500px 1fr 300px;
+    grid-template-rows: repeat(2, 50%);
+    grid-template-areas:"logo redes secciones"
+                        "logo redes secciones";
+    justify-content: center;
+    justify-items: center;
+    
+
+    &__logo{
+        grid-area: logo;
+        @include sizes(100%,100%);
+        display: flex;
+        @include displayFlex( column , center , center , center , nowrap , auto );
+
+        .footer-container__img{
+            @include sizes(100%,100%);
+            padding: 0%;
+            margin: auto;
+        }
+    }
+
+    &__redes{
+        grid-area: redes;
+        @include sizes(100%,100%);
+        display: flex;
+        @include displayFlex(row, center , center , center , nowrap , auto );
+
+        .footer-container__listaRedes{
+            @include sizes(100%,100%);
+            display: flex;
+            @include displayFlex(row, center , center, center, nowrap , auto );
+            padding: 0%;
+
+            .footer-container__itemRedes{
+                @include sizes(100%,100%);
+                display: flex;
+                @include displayFlex(row, center, center , center , nowrap , auto );
+
+                .footer-container__iconos{
+                    @include sizes(60%,60%);
+                display: flex;
+                @include displayFlex(row, center, center , center , nowrap , auto );
+                }
+            }
+        }
+    }
+    
+    &__secciones{
+        grid-area: secciones;
+        @include sizes(auto,auto);
+        display: flex;
+        @include displayFlex(column , center , space-evenly , center , nowrap , auto );
+        
+
+        a{
+            list-style: none;
+            text-transform: none;
+            text-decoration: none;
+            color: white;
+        }
+
+        .footer-container__listaSecciones{
+            @include sizes(auto,auto);
+            display: flex;
+            @include displayFlex(column, center , space-evenly , center , nowrap , auto );
+
+            .footer-container__item{
+                @include fontValues(normal, bold , $font-family , 25px , white , center );
+                text-transform: none;
+                padding-top: 10%;
+                display: inline-block;
+                }
+            }
+        }
+    }
+}
+
+
+/*
+Navbar secciones con BS5
+*/
+
+.headerSecciones{
+    background-color: $colorNav;
+}
+
+.container{
+    background-color: $colorNav;
+    width: 100%;
+}
+
+.navbar-brand{
+    height: 100%;
+    width: 50%;
+}
+
+.navbar{
+    width: 100%;
+    height: 100%;
+}
+
+.navbar-nav{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.logoSecciones{
+        width: 55%;
+        height: 55%;
+}
+
+.itemNav{
+    @include fontValues(normal, bold , $font-family , 27px , white , center );
+    text-transform: none;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+/*
+Fin navbar con BS
+*/
+
+
+.mainMenu{
+    @include sizes(100%,100% );
+    background-color: $colorFondo;
+    margin: 0%;
+}
+
+.tituloMainMenu{
+    @include fontValues(normal , bolder , $font-family , $sizeTitulos , black , center );
+    padding: 2% 0% 0% 0%;
+}
+
+.losMejoresPlatosMenu{
+    @include sizes(100%,100% );
+    padding: auto;
+}
+
+.ulDelMenu{
+    display: grid;
+    grid-template-columns: repeat(3 , 30%);
+    grid-template-rows: repeat(3, 33%);
+    grid-template-areas:"imagen1 imagen2 imagen3"
+                    "imagen4 imagen5 imagen6"
+                    "imagen7 imagen8 imagen9";
+    justify-content: center;
+    align-content: center;
+    row-gap: 2%;
+    column-gap: 2%;
+}
+
+.listaMenuUno{
+    grid-area: imagen1;
+    @include sizes(100%,100%);
+    display: flex;
+    @include displayFlex(column , center , center , center , nowrap , auto );
+    margin: 0% ;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.listaMenuDos{
+    grid-area: imagen4;
+    @include sizes(100%,100%);
+    display: flex;
+    @include displayFlex(column , center , center , center , nowrap , auto );
+}
+
+.listaMenuTres{
+    grid-area: imagen7;
+    @include sizes(100%,100%);
+    display: flex;
+    @include displayFlex(column , center , center , center , nowrap , auto );
+}
+
+.listaMenuCuatro{
+    grid-area: imagen9;
+    @include sizes(100%,100%);
+    display: flex;
+    @include displayFlex(column , center , center , center , nowrap , auto );
+}
+
+.listaMenuCinco{
+    grid-area: imagen8;
+    @include sizes(100%,100%);
+    display: flex;
+    @include displayFlex(column , center , center , center , nowrap , auto );
+}
+
+.listaMenuSeis{
+    grid-area:imagen3;
+    @include sizes(100%,100%);
+    display: flex;
+    @include displayFlex(column , center , center , center , nowrap , auto );
+}
+
+.listaMenuSiete{
+    grid-area:imagen2;
+    @include sizes(100%,100%);
+    display: flex;
+    @include displayFlex(column , center , center , center , nowrap , auto );
+}
+
+.listaMenuOcho{
+    grid-area:imagen5;
+    @include sizes(100%,100%);
+    display: flex;
+    @include displayFlex(column , center , center , center , nowrap , auto );
+}
+
+.listaMenuNueve{
+    grid-area:imagen6;
+    @include sizes(100%,100%);
+    display: flex;
+    @include displayFlex(column , center , center , center , nowrap , auto );
+}
+
+
+.listaMenuUno:hover , .listaMenuDos:hover , .listaMenuTres:hover , .listaMenuCuatro:hover , .listaMenuCinco:hover {
+    width: 115%;
+    height: 115%;
+    transition: all 1s;
+}
+
+.imagenNumeroUno , .imagenNumeroDos , .imagenNumeroTres , .imagenNumeroCuatro , .imagenNumeroCinco , .imagenNumeroSeis , .imagenNumeroSiete , .imagenNumeroOcho , .imagenNumeroNueve{
+    height: 80%;
+    width: 80%;
+    justify-self: center;
+    align-self: center;
+    border: solid 10px $colorPadding ;
+
+}
+
+.pDelMenu{
+    @include fontValues(normal , normal , $font-family , 23px , black , center );
+    margin: auto;
+}
+
+/*
+Pertenece a la pestaña de Reservas /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+.main-reservas{
+    @include sizes(100vh, 100%);
+    background-color: $colorFondo;
+
+.containerReservas{
+    @include sizes(85%,100%);
+    display: flex;
+    @include displayFlex(row , center , center , center , nowrap , auto );
+    padding: 2%;
+}
+
+&__titulo{
+    @include fontValues(normal, bold , $font-family , $sizeTitulos , black , center);
+    text-transform: none;
+    padding: 0;
+}
+
+&__imagen{
+    @include sizes(100%,40%);
+    display: flex;
+    @include displayFlex(column, center , center , center , nowrap , auto );
+
+    .main-reservas__img{
+        @include sizes(100%,100%);
+        margin: auto;
+        border: 10px solid $colorPadding;
+    }
+}
+
+&__informacion{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    width: 47%;
+    height: 100%;
+
+}
+
+.accordion{
+    @include sizes(100%,50%);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.accordion-item{
+    background-color: transparent;
+    @include fontValues(normal, normal , $font-family , 20px , black , center );
+}
+
+.accordion-button {
+    background-color: rgba(173, 98, 0, 0.582) !important;
+    @include fontValues( normal , normal , $font-family , 23px , black , center );
+}
+
+}
+
+/*
+Pertenece a la pestaña de Contacto /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+.main-contacto{
+    height: 100%;
+    width: 100%;
+    background-color: $colorFondo;
+
+    &__titulo{
+        @include fontValues(normal, bold , $font-family , $sizeTitulos , black , center );
+        text-transform: none;
+        margin: auto;
+        padding: 2%;
+    }
+
+}
+
+.grid-contacto{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 50% 50%;
+    grid-template-areas:"api api"
+                    "formulario informacion";
+    row-gap: 5px;
+    justify-content: space-between;
+    align-content: center;
+
+
+&__api{
+    @include sizes(100%,95%);
+    margin: auto;
+    grid-area: api;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+.grid-contacto__img{
+    @include sizes(100%,100%);
+    justify-self: center;
+    border: solid 7px $colorPadding;
+}
+
+}
+
+&__formulario{
+    @include sizes(100%,100%);
+    @include fontValues(normal, normal , $font-family , 20px , black , center );
+    text-transform: none;
+    grid-area: formulario;
+    display: flex;
+    @include displayFlex(column , center , center, center , nowrap , auto );
+    padding: 5%;
+
+    .datosPersonalesContacto{
+        @include fontValues(normal, bolder , $font-family , 30px , black , center );
+        text-transform: none;
+    }
+}
+
+&__informacion{
+    grid-area: informacion;
+    height: min-content;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+&__texto-h2{
+    @include fontValues(normal, bolder , $font-family , 35px , black , center );
+}
+
+&__texto{
+    @include fontValues(normal, normal , $font-family , 25px , black , center );
+}
+
+}
+
+/*
+Pertenece a la pestaña Preguntas frecuentes /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+.main-faq{
+    @include sizes(100%,100%);
+    background-color: $colorFondo;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: 150px repeat(2, 40%);
+    grid-template-areas:"titulo titulo"
+                    "container container2"
+                    "container container2";
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+
+
+    &__titulo{
+        @include fontValues(normal , bolder , $font-family , $sizeTitulos , black , center );
+        text-transform: none;
+        grid-area: titulo;
+        padding: 2% 2% 2% 2%;
+    }
+
+    &__primer-container{
+        grid-area: container;
+        @include sizes(100%,100%);
+        display: flex;
+        @include displayFlex(column , center , space-evenly , center , nowrap , auto );
+        padding: 0% 7% 0% 5%;
+    }
+
+    &__segundo-container{
+        grid-area: container2;
+        @include sizes(100%,100%);
+        display: flex;
+        @include displayFlex(column , center , space-evenly , center , nowrap , auto );
+        padding: 0% 7% 0% 5%;
+    }
+
+    &__preguntas{
+        @include fontValues(normal , bolder , $font-family , 35px , black , center );
+    }
+
+
+    &__respuestas{
+        @include fontValues(normal, normal , $font-family , 25px , black , center );
+    }
+}
+
+/*
+PESTAÑA QUIENES SOMOS //////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+    .main-qs{
+    @include sizes(100vh,100%);
+    background-color: $colorFondo;
+
+    &__titulo{
+        @include fontValues(normal, bolder , $font-family , $sizeTitulos , black , center );
+        text-transform: none;
+        padding: 2% 2% 1% 2%;
+    }
+
+    .container-qs{
+        display: flex;
+        @include displayFlex(row, center , center , center , nowrap , auto );
+    }
+
+    &__imgs{
+        @include sizes(100%,50% );
+        display: flex;
+        @include displayFlex(column , center , center , center , nowrap , auto );
+
+        .main-qs__img{
+            @include sizes(90%,90%);
+            margin: 5% 5% 5% 8%;
+            border: 10px solid $colorPadding;
+        }
+    }
+
+    &__texto{
+    @include sizes(100%,47%);
+    display: flex;
+    @include displayFlex(column , center , space-evenly , center , nowrap , auto );
+
+        .main-qs__h2{
+            @include fontValues(normal , bolder , $font-family , 40px , black , center );
+            text-transform: none;
+        }
+
+        .main-qs__p{
+            @include fontValues(normal , normal , $font-family , 30px , black , center );
+        }
+    }
+}
+
+/*
+////////////////////////// MEDIA QUERYS //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+/*
+Celulares /////////////////////////////////////////
+*/
+
+
+@media only screen and (max-device-width:768px){
+
+
+
+    .header{
+        background-image: url(../Imagenes/imagenindexdos.png);
+        background-size: cover;
+        background-position-y: 50%;
+        background-position-x: 40%;
+        @include sizes(100vh,100%);
+        display: grid;
+        grid-template-columns: repeat(3 ,33.33%);
+        grid-template-rows: 10% 45% 45%;
+        grid-template-areas:"secciones secciones secciones"
+                            "logo logo logo"
+                            "logo logo logo";
+
+        &__logoHeader{
+            @include sizes (40%,85%);
+            display: inline-block ;
+            margin: auto;
+            grid-area: logo;
+
+            .header__imgLogo{
+                @include sizes(100%,100%);
+            }
+        }
+
+        &__navIndex{
+            @include sizes(auto,100%);
+            display: inline-block;
+            grid-area: secciones;
+            align-self: end;
+
+            a{
+                text-decoration: none;
+                color: white;
+            }
+            .header__seccionesIndex{
+                list-style: none;
+                display:flex;
+                @include displayFlex(row, flex-end , space-around , center , nowrap , auto );
+                padding: 0%;
+
+                .header__itemIndex{
+                    display: inline-block;
+                    margin: 0% 1% 0% 1%;
+                    @include fontValues(normal, bolder , $font-family , 14px , white , center );
+                    text-transform: none;
+                }
+            }
+        }
+    }
+/*
+Main Index
+*/
+    .divMainPromociones{
+        background-color: $colorFondo;
+        height: 100vh;
+        display: flex;
+        @include displayFlex(column, center , center , center , nowrap , auto );
+    }
+    
+    .divImagenPromociones{
+        @include sizes(50%,100%);
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        margin: auto;
+    }
+    
+    .imagenPromociones{
+        @include sizes(80%, 90%);
+        border: $borderPx solid $colorPadding;
+        margin: auto;
+    }
+    
+    .divTextoPromociones{
+        @include sizes(50%,100%);
+        margin: auto;
+        display: flex;
+        @include displayFlex(column, center , center , center , nowrap , auto);
+    }
+    
+    .tituloPromociones{
+        @include fontValues(normal, bolder , $font-family , 60px , black , center );
+    }
+    
+    .parrafoPromociones{
+        @include fontValues(normal, normal , $font-family , 60px , black , center );
+    }
+    
+    
+    .imagenSeparadoraDeDiv{
+        background-image: url(../Imagenes/imagenseparadorados.png);
+        background-size: cover;
+        background-position-y: center;
+        background-position-x: center;
+        @include sizes(100vh,100%);
+    }
+    /*
+    Aca empieza el apartado de historia del index
+    */
+    .divMainHistoria{
+        background-color: $colorFondo;
+        @include sizes(100vh,100% );
+        display: flex;
+        @include displayFlex(column, center ,center ,center ,nowrap , auto );
+    }
+    
+    .divImagenMainHistoria{
+        @include sizes(60%, 100%);
+        display: flex;
+        @include displayFlex(column, center , center , center , nowrap , auto );
+    }
+    
+    .imagenMainHistoria{
+        @include sizes(75%,95%);
+        border: $borderPx solid $colorPadding;
+    }
+    
+    .divTextoMainHistoria{
+        @include sizes(50%, 100%);
+        display: flex;
+        @include displayFlex(column,center ,center , center ,nowrap ,auto);
+    }
+    
+    .tituloMainHistoria{
+        @include fontValues(normal, bolder , $font-family , 30px , black , center );
+        padding: 2%;
+    }
+    
+    .parrafoMainHistoria{
+        @include fontValues(normal, normal , $font-family , 17px , black , center );
+    padding: 2%;
+    }
+    
+/*
+        Footer///////////////////////////////////////////
+*/
+
+.footer{
+    background-color: $colorFooter;
+    @include sizes(100%,100%);
+
+    .footer-container{
+        display: grid;
+        grid-template-columns: repeat(3, 33.33%);
+        grid-template-rows: repeat(2, 33%) 75px;
+        grid-template-areas:"logo logo logo"
+                            "redes redes redes"
+                            "secciones secciones secciones";
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    
+        &__logo{
+            @include sizes(100%,100%);
+            display: flex;
+            @include displayFlex(column, center , center , center , nowrap , auto);
+            padding: 0%;
+            grid-area: logo;
+
+
+            .footer-container__img{
+                @include sizes(180px, 75%);
+                margin: auto;
+                padding: 0%;
+            }
+        }
+
+        &__redes{
+            @include sizes(100%,100%);
+            grid-area: redes;
+            display: flex;
+            @include displayFlex(row , center , space-between , center , nowrap , auto);
+            padding: 0% ;
+
+            .footer-container__listaRedes{
+                @include sizes(80%,80%);
+                display: flex;
+                @include displayFlex(row, center , space-between , center , nowrap , auto);
+                padding: 0%;
+
+                .footer-container__itemRedes{
+                    @include sizes(67%, 25%);
+                    margin: auto;
+
+                    .footer-container__iconos{
+                        @include sizes(100%, 100%);
+                    }
+                }
+            }
+        }
+
+        &__secciones{
+            @include sizes(80%, 100%);
+            display: flex;
+            @include displayFlex(row , center , space-evenly , center , nowrap , 0% );
+            grid-area: secciones;
+
+            .footer-container__listaSecciones{
+                display: flex;
+                @include displayFlex(row , center , space-around , center , nowrap , auto );
+                padding: 0%;
+
+                .footer-container__item{
+                        @include fontValues(normal, bolder , $font-family , 15px , white , center );
+                        text-transform: none;
+                        list-style: none;
+                        display: flex;
+                        @include displayFlex(row, center , center , center , nowrap , auto);
+                        padding-right: 3%;
+                    }
+                }
+            } 
+        }
+    }
+
+    
+/*
+Navbar secciones con BS5
+*/
+
+.headerSecciones{
+    background-color: $colorNav;
+}
+
+.container{
+    background-color: $colorNav;
+    @include sizes(auto,100%);
+}
+
+.navbar-brand{
+    @include sizes(100%,50%);
+}
+
+.navbar{
+    @include sizes(100%,100%);
+}
+
+.navbar-nav{
+    @include sizes(100%,100%);
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.logoSecciones{
+    @include sizes(100%,100%);
+}
+
+.itemNav{
+    @include fontValues(normal, bold , $font-family , 15px , white , auto);
+    text-transform: none;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+/*
+Fin navbar con BS
+*/
+
+
+/*
+Pertenece a la pestaña de Menu /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+.mainMenu{
+    @include sizes(100%,100%);
+    background-color: $colorFondo;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.tituloMainMenu{
+    @include fontValues(normal, bolder , $font-family , $sizeTitulosCelulares , black , center);
+    padding: $paddingTituloCelulares;
+}
+
+.losMejoresPlatosMenu{
+    @include sizes(100%,100%);
+    padding: auto;
+    margin: auto;
+}
+
+.ulDelMenu{
+    display: grid;
+    @include sizes(100%,100%);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5 , 1fr);
+    grid-template-areas:"imagen1 imagen2"
+                        "imagen3 imagen4"
+                        "imagen5 imagen6"
+                        "imagen7 imagen8"
+                        "imagen9 imagen9";
+    justify-content: center;
+    align-content: center;
+    row-gap: 0%;
+    column-gap: 0%;
+    margin: auto;
+    padding: 0%;
+}
+
+.listaMenuUno{
+    grid-area: imagen1;
+    @include sizes(100%,100%);
+    display: flex;
+    @include displayFlex(column, center, space-between , center , nowrap , auto );
+}
+
+.listaMenuDos{
+    grid-area: imagen4;
+    @include sizes(100%,100%);
+    display: flex;
+    @include displayFlex(column, center , space-between , center , nowrap ,auto );
+}
+
+.listaMenuTres{
+    grid-area: imagen7;
+    @include sizes(100%,100%);
+    display: flex;
+    @include displayFlex(column, center , space-between , center , nowrap ,auto );
+}
+
+.listaMenuCuatro{
+    grid-area: imagen9;
+    @include sizes(100%,100%);
+    display: flex;
+    @include displayFlex(column, center , space-between , center , nowrap ,auto );
+}
+
+.listaMenuCinco{
+    grid-area: imagen8;
+    @include sizes(100%,100%);
+    display: flex;
+    @include displayFlex(column, center , space-between , center , nowrap ,auto );
+}
+
+.listaMenuSeis{
+    grid-area:imagen3;
+    @include sizes(100%,100%);
+    display: flex;
+    @include displayFlex(column, center , space-between , center , nowrap ,auto );
+}
+
+.listaMenuSiete{
+    grid-area:imagen2;
+    @include sizes(100%,100%);
+    display: flex;
+    @include displayFlex(column, center , space-between , center , nowrap ,auto );
+}
+
+.listaMenuOcho{
+    grid-area:imagen5;
+    @include sizes(100%,100%);
+    display: flex;
+    @include displayFlex(column, center , space-between , center , nowrap ,auto );
+}
+
+.listaMenuNueve{
+    grid-area:imagen6;
+    @include sizes(100%,100%);
+    display: flex;
+    @include displayFlex(column, center , space-between , center , nowrap ,auto );
+}
+
+
+.listaMenuUno:hover , .listaMenuDos:hover , .listaMenuTres:hover , .listaMenuCuatro:hover , .listaMenuCinco:hover , .listaMenuSeis:hover , .listaMenuSiete:hover , .listaMenuOcho:hover , .listaMenuNueve:hover {
+    width: 115%;
+    height: 115%;
+    transition: all 1s;
+}
+
+.imagenNumeroUno , .imagenNumeroDos , .imagenNumeroTres , .imagenNumeroCuatro , .imagenNumeroCinco , .imagenNumeroSeis , .imagenNumeroSiete , .imagenNumeroOcho , .imagenNumeroNueve{
+    @include sizes(75%,75% );
+    display: flex;
+    @include displayFlex(column, center , space-between , center , nowrap ,auto );
+    justify-self: center;
+    align-self: center;
+    border: solid $borderPx $colorPadding;
+    
+}
+
+.pDelMenu{
+    @include fontValues(normal , normal , $font-family  , 17px , black , center);
+    margin: auto;
+    padding-top: 2%;
+}
+
+/*
+Pertenece a la pestaña de Reservas /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+.main-reservas{
+    @include sizes(100%,100%);
+    background-color: $colorFondo;
+    display: flex;
+    @include displayFlex(column, center , center , center , nowrap , auto );
+
+    &__titulo{
+        @include fontValues(normal, bold , $font-family , $sizeTitulosCelulares , black , center);
+        text-transform: none;
+        padding: $paddingTituloCelulares;
+    }
+
+    .containerReservas{
+        display: flex;
+        @include displayFlex(column, center , center , center , nowrap , auto );
+    }
+
+    &__imagen{
+        display: flex;
+        @include sizes(100%,100%);
+        align-content: center;
+        justify-content: center;
+
+        .main-reservas__img{
+            @include sizes(90%,90% );
+            margin: auto;
+            border: $borderPx solid $colorPadding;
+        }
+    }
+    
+    &__informacion{
+        @include sizes(100%,100% );
+        @include fontValues(normal , normal , $font-family, 15px , black , auto );
+        display: flex;
+        flex-direction: row;
+}
+
+.accordion{
+    display: flex;
+    @include displayFlex(column, center , center , center , nowrap , auto );
+    padding: 10%;
+    @include sizes(100%,100% );
+}
+
+    .accordion-item{
+        background-color: transparent;
+        width: 100%;
+    }
+
+    .accordion-button {
+        background-color: rgba(173, 98, 0, 0.582);
+        @include fontValues(normal , normal , $font-family, 20px , black , auto );
+}
+
+}
+
+/*
+Pertenece a la pestaña de Contacto /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+.main-contacto{
+    @include sizes(100%,100%);
+    background-color: $colorFondo;
+
+    &__titulo{
+        @include fontValues(normal, bold , $font-family , $sizeTitulosCelulares , black , center );
+        text-align: center;
+        text-transform: none;
+        color: black;
+        margin: auto;
+        padding: $paddingTituloCelulares;
+    }
+
+}
+
+.grid-contacto{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 330px 340px 1fr 50px;
+    grid-template-areas:"api"
+                        "informacion" 
+                        "formulario"
+                        "formulario";
+    row-gap: 5px;
+    justify-content: space-between;
+    align-content: center;
+    
+    
+    &__api{
+        @include sizes(100%,100%);
+        margin: auto;
+        grid-area: api;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .grid-contacto__img{
+            @include sizes(80%,95%);
+            justify-self: center;
+            border: solid $borderPx $colorPadding;
+        }
+
+}
+
+
+    &__informacion{
+    grid-area: informacion;
+    @include sizes(100%,100%);
+    margin: auto;
+    display: flex;
+    @include displayFlex(column, center , space-between , center , nowrap , auto );
+}
+
+    &__texto{
+        @include fontValues(normal , normal , $font-family , 17px , black , center );
+}
+
+    &__texto-h2{
+        @include fontValues(normal , bolder , $font-family , 20px , black , center );
+    }
+
+
+    &__formulario{
+        @include sizes(100%,100%);
+        @include fontValues(normal, normal , $font-family , 17px , black, center);
+        text-transform: none;
+        padding: 5%;
+        grid-area: formulario;
+        display: flex;
+        @include displayFlex( column , center , space-between , center , nowrap , auto );
+
+
+        .datosPersonalesContacto{
+            @include fontValues(normal, bolder , $font-family , 20px , black, center );
+            text-transform: none;
+        }
+}
+
+
+
+}
+
+/*
+Pertenece a la pestaña Preguntas frecuentes /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+.main-faq{
+    @include sizes(100%,100%);
+    background-color: $colorFondo;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100px 580px 620px;
+    grid-template-areas:"titulo"
+                        "container"
+                        "container2";
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    &__titulo{
+        @include fontValues(normal, bolder , $font-family , $sizeTitulosCelulares , black, center );
+        text-transform: none;
+        grid-area: titulo;
+        padding: $paddingTituloCelulares;
+    }
+
+    &__primer-container{
+        @include sizes(100%,100%);
+        padding: 3%;
+        grid-area: container;
+        display: flex;
+        @include displayFlex( column , center , space-between , center , nowrap , auto );
+    }
+
+    &__segundo-container{
+        @include sizes(100%,100%);
+        padding: 2%;
+        grid-area: container2;
+        display: flex;
+        @include displayFlex(column, center , space-between , center , nowrap , auto );
+    }
+    
+    &__respuesta{
+        display: flex;
+        @include displayFlex(column , center , center , center , nowrap , auto );
+    }
+
+    &__preguntas{
+        display: flex;
+        @include displayFlex( column, center , space-between , center , nowrap , auto );
+        @include fontValues(normal , bolder , $font-family , 19px , black , center);
+        padding: 3%;
+    }
+
+    &__respuestas{
+        display: flex;
+        @include displayFlex( column, center , space-between , center , nowrap , auto );
+        @include fontValues(normal, normal , $font-family , 17px , black , center );
+        padding: 3%;
+    }
+}
+
+/*
+Pertenece a la pestaña Quienessomos.html /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+.main-qs{
+    @include sizes(100%,100%);
+    background-color: $colorFondo;
+    display: flex;
+    @include displayFlex(column , center , space-between , center , nowrap ,auto );
+    
+    &__titulo{
+        @include fontValues(normal, bolder , $font-family , $sizeTitulosCelulares , black , center );
+        text-transform: none;
+        grid-area: titulo;
+        padding: $paddingTituloCelulares;
+    }
+
+    .container-qs{
+        display: flex;
+        @include displayFlex(column , center , space-between , center , nowrap ,auto );
+    }
+
+    &__imgs{
+        @include sizes(100%,100% );
+        display: flex;
+        @include displayFlex( column , center , center , center , nowrap , auto );
+        
+        .main-qs__img{
+            @include sizes(90%, 95%);
+            margin: auto;
+            border: 5px solid $colorPadding;
+        }
+    }
+    
+    &__texto{
+        @include sizes(100%,100%);
+        @include fontValues(normal, normal , $font-family , auto , black , center);
+        text-transform: none;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+
+        .main-qs__h2{
+            @include fontValues(normal, bolder , $font-family , 23px , black , center);
+            text-transform: none;
+            padding: $paddingTituloCelulares;
+        }
+        
+        .main-qs__p{
+            @include fontValues(normal, normal , $font-family , 15px , black, center );
+            padding: 2%;
+        }
+    }
+}
+
+}
+
+/*
+///////////////////////////////////// TABLETS //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+
+    @media only screen and (min-width:768px){
+        .header{
+            background-image: url(../Imagenes/imagenindexdos.png);
+            background-size: cover;
+            background-position-y: 50%;
+            background-position-x: 40%;
+            @include sizes(100vh, 100% );
+            display: grid;
+            grid-template-columns: repeat(3 ,33.33%);
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-areas:"logo logo logo"
+                                "logo logo logo"
+                                "secciones secciones secciones";
+
+            &__logoHeader{
+                @include sizes(100%,100%);
+                display: flex;
+                @include displayFlex( column , center , center , center , nowrap , auto );
+                grid-area: logo;
+                align-self: center;
+                justify-self: center;
+
+                .header__imgLogo{
+                    @include sizes(100%,100% );
+                }
+                }
+            
+            &__navIndex{
+                @include sizes(auto, 100% );
+                display: inline-block;
+                grid-area: secciones;
+                align-self: end;
+                
+                .header__seccionesIndex{
+                    text-transform: none;
+                    list-style: none;
+                    display:flex;
+                    @include displayFlex(row, flex-end , space-around , center , nowrap , auto );
+                    
+                    .header__itemIndex{
+                        display: inline-block;
+                        @include fontValues(normal , bolder , $font-family , 25px , white , center );
+                        margin: auto;
+                    }
+                }
+            }    
+            a{
+                text-decoration: none;
+                color: white;
+            }
+        }
+/*
+Main Index
+*/
+    
+    .divMainPromociones{
+        background-color: $colorFondo;
+        @include sizes(100vh,100%);
+        display: flex;
+        @include displayFlex(column, center , space-between , center , nowrap , auto );
+    }
+    
+    .divImagenPromociones{
+        @include sizes(65%,100%);
+        display: flex;
+        @include displayFlex(column , center , center , center , nowrap, auto );
+    }
+    
+    .imagenPromociones{
+        @include sizes (95%, 95%);
+        border: 10px solid $colorPadding;
+        margin: auto;
+    }
+    
+    .divTextoPromociones{
+        @include sizes(50%,100%);
+        display: flex;
+        @include displayFlex(column, center , center , center , nowrap , auto );
+    }
+    
+    .tituloPromociones{
+        @include fontValues(normal, bolder , $font-family , 85px , black , center );
+    }
+    
+    .parrafoPromociones{
+        @include fontValues(normal, normal , $font-family , 90px , black , center );
+    }
+    
+    
+    .imagenSeparadoraDeDiv{
+        background-image: url(../Imagenes/imagenseparadorados.png);
+        background-size: cover;
+        background-position-y: center;
+        background-position-x: center;
+        height: 100vh;
+    }
+    /*
+    Aca empieza el apartado de historia del index
+    */
+    .divMainHistoria{
+        background-color: $colorFondo;
+        @include sizes(100vh,100%);
+        display: flex;
+        @include displayFlex(column, center , space-between , center , nowrap , auto );
+    }
+    
+    .divImagenMainHistoria{
+        @include sizes(60%, 100%);
+        display: flex;
+        @include displayFlex( column , center, center , center, nowrap , auto );
+    }
+    
+    .imagenMainHistoria{
+        @include sizes(95%,95% );
+        border: 10px solid $colorPadding ;
+    }
+    
+    .divTextoMainHistoria{
+        @include sizes(50%,100%);
+        display: flex;
+        @include displayFlex(column , center , space-evenly , center , nowrap , auto);
+    }
+    
+    .tituloMainHistoria{
+        @include fontValues(normal , bolder , $font-family , 70px , black , center);
+    }
+    
+    .parrafoMainHistoria{
+        @include fontValues(normal , normal , $font-family , 30px , black, center);
+    }
+    
+/*
+        Footer///////////////////////////////////////////
+*/
+    .footer{
+        background-color: $colorFooter;
+        @include sizes(100%,100%);
+
+        .footer-container{
+            @include sizes(100%,100%);
+            display: grid;
+            grid-template-columns: repeat(3, 33.33%);
+            grid-template-rows: repeat(3, 33%);
+            grid-template-areas:"logo logo logo"
+                                "redes redes redes"
+                                "secciones secciones secciones";
+            justify-content: center;
+            align-content: center;
+
+            &__logo{
+                grid-area: logo;
+                @include sizes(100%,100%);
+                display: flex;
+                @include displayFlex( row, center , center , center , nowrap , auto );
+                justify-self: center;
+                align-self: center;
+                
+                .footer-container__img{
+                    @include sizes(200px, 50%);
+                    margin: 0%;
+                }
+            }
+
+            &__redes{
+                grid-area: redes;
+                @include sizes(100%,100%);
+                display: flex;
+                @include displayFlex( row , center , space-evenly , center , nowrap , 0 );
+                padding: 0% ;
+
+                .footer-container__listaRedes{
+                    @include sizes(80%,80%);
+                    display: flex;
+                    @include displayFlex(row, center , space-between , center , nowrap, auto);
+
+                    .footer-container__itemRedes{
+                        @include sizes(100%,50%);
+                        display: inline-block;
+                        margin: 3%;
+                        padding: auto;
+
+
+                        .footer-container__iconos{
+                            @include sizes(100%,100%);
+                        }
+                    }
+                }
+            }
+
+            &__secciones{
+                grid-area: secciones;
+                @include sizes(100%,100%);
+                display: flex;
+                @include displayFlex(row, center , center , center , nowrap , 0 );
+                padding: 0%;
+
+
+                .footer-container__listaSecciones{
+                    @include sizes(100%,100%);
+                    display: flex;
+                    @include displayFlex( row, center ,  space-between , center , nowrap , auto );
+
+                    .footer-container__item{
+                        @include fontValues(normal, bold , $font-family , 25px , white , center);
+                        text-transform: none;
+                        list-style: none;
+                        display: flex;
+                        @include displayFlex( row , center , center , center , nowrap , auto );
+                        padding: 0%;
+                    }
+                }
+            }
+        }
+    }
+
+    /*
+Navbar secciones con BS5
+*/
+
+.headerSecciones{
+    background-color: $colorNav;
+}
+
+.container{
+    background-color: $colorNav;
+    @include sizes(100%,100%);
+}
+
+.navbar-brand{
+    @include sizes(100%,50%);
+}
+
+.navbar{
+    @include sizes(100%,100%);
+}
+
+.navbar-nav{
+    @include sizes(100%,100%);
+    display: flex;
+    @include displayFlex(column , flex-start , space-between , flex-start , nowrap , auto );
+}
+
+.logoSecciones{
+    @include sizes(100%,100%);
+}
+
+.itemNav{
+    @include fontValues(normal , bolder , $font-family , 23px , white, center);
+    display: inline-block;
+}
+
+/*
+Fin navbar con BS
+*/
+
+
+/*
+Pertenece a la pestaña de Menu /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+.mainMenu{
+    @include sizes(100%,100%);
+    background-color: $colorFondo;
+    display: flex;
+    @include displayFlex(column, center , center , center , nowrap , auto );
+}
+
+.tituloMainMenu{
+    @include fontValues(normal, bold , $font-family , $sizeTitulosTablets , black , center);
+    padding: $paddingTituloCelulares;
+}
+
+.losMejoresPlatosMenu{
+    @include sizes(100%,100%);
+    padding: auto;
+    margin: auto;
+}
+
+.ulDelMenu{
+    display: grid;
+    @include sizes(100%,100%);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5 , 1fr);
+    grid-template-areas:"imagen1 imagen2"
+                        "imagen3 imagen4"
+                        "imagen5 imagen6"
+                        "imagen7 imagen8"
+                        "imagen9 imagen9";
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+    padding: 0%;
+}
+
+.listaMenuUno{
+    grid-area: imagen1;
+    @include sizes(100%,100%);
+    display: flex;
+    @include displayFlex(column, center , space-between , center , nowrap ,auto );
+}
+
+.listaMenuDos{
+    grid-area: imagen4;
+    @include sizes(100%,100%);
+    display: flex;
+    @include displayFlex(column, center , space-between , center , nowrap ,auto );
+}
+
+.listaMenuTres{
+    grid-area: imagen7;
+    @include sizes(100%,100%);
+    display: flex;
+    @include displayFlex(column, center , space-between , center , nowrap ,auto );
+}
+
+.listaMenuCuatro{
+    grid-area: imagen9;
+    @include sizes(100%,100%);
+    display: flex;
+    @include displayFlex(column, center , space-between , center , nowrap ,auto );
+}
+
+.listaMenuCinco{
+    grid-area: imagen8;
+    @include sizes(100%,100%);
+    display: flex;
+    @include displayFlex(column, center , space-between , center , nowrap ,auto );
+}
+
+.listaMenuSeis{
+    grid-area:imagen3;
+    @include sizes(100%,100%);
+    display: flex;
+    @include displayFlex(column, center , space-between , center , nowrap ,auto );
+}
+
+.listaMenuSiete{
+    grid-area:imagen2;
+    @include sizes(100%,100%);
+    display: flex;
+    @include displayFlex(column, center , space-between , center , nowrap ,auto );
+}
+
+.listaMenuOcho{
+    grid-area:imagen5;
+    @include sizes(100%,100%);
+    display: flex;
+    @include displayFlex(column, center , space-between , center , nowrap ,auto );
+}
+
+.listaMenuNueve{
+    grid-area:imagen6;
+    display: flex;
+    @include sizes(100%,100%);
+    @include displayFlex(column, center , space-between , center , nowrap ,auto );
+}
+
+
+.listaMenuUno:hover , .listaMenuDos:hover , .listaMenuTres:hover , .listaMenuCuatro:hover , .listaMenuCinco:hover , .listaMenuSeis:hover , .listaMenuSiete:hover , .listaMenuOcho:hover , .listaMenuNueve:hover {
+    @include sizes(104%,104%);
+    transition: all 1s;
+}
+
+.imagenNumeroUno , .imagenNumeroDos , .imagenNumeroTres , .imagenNumeroCuatro , .imagenNumeroCinco , .imagenNumeroSeis , .imagenNumeroSiete , .imagenNumeroOcho , .imagenNumeroNueve{
+    @include sizes(65%,85%);
+    justify-self: center;
+    align-self: center;
+    border: solid 10px $colorPadding;
+}
+
+.pDelMenu{
+    @include fontValues( normal , normal , $font-family , 25px , black , center );
+    margin: 0%;
+}
+
+/*
+Pertenece a la pestaña de Reservas /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+.main-reservas{
+    @include sizes(100%,100% );
+    background-color: $colorFondo;
+    display: flex;
+    @include displayFlex(column, center , center , center , nowrap , auto );
+
+    .containerReservas{
+        @include displayFlex(column, center , center , center , nowrap , auto );
+        @include sizes(100%,100%);
+    }
+
+    &__titulo{
+        @include fontValues(normal , bolder , $font-family , $sizeTitulosTablets , black , center );
+        text-transform: none;
+        padding: $paddingTituloCelulares;
+        margin: 2%;
+    }
+
+    &__imagen{
+        @include sizes(100%,100%);
+
+        .main-reservas__img{
+            width: 88%;
+            height: 88%;
+            margin: auto;
+            border: 10px solid $colorPadding;
+        }
+    }
+    
+    &__informacion{
+        @include sizes(100%,100%);
+        display: flex;
+        @include displayFlex(column, center , center , center , nowrap , auto );
+        @include fontValues(normal, normal , $font-family , 23px , black , center);
+}
+
+.accordion{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 5%;
+    @include sizes(100%,100%);
+}
+
+    .accordion-item{
+        background-color: transparent;
+        width: 100%;
+    }
+
+    .accordion-button {
+        background-color: rgba(173, 98, 0, 0.582);
+        @include fontValues(normal, normal , $font-family , 25px , black , center);
+}
+}
+
+
+/*
+Pertenece a la pestaña de Contacto /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+.main-contacto{
+    @include sizes(100%,100%);
+    background-color: $colorFondo;
+
+    &__titulo{
+        @include fontValues(normal, bolder , $font-family , $sizeTitulosTablets , black , center );
+        text-transform: none;
+        margin: auto;
+        padding: $paddingTituloCelulares;
+    }
+
+}
+
+.grid-contacto{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr) 50px;
+    grid-template-areas:"api"
+                        "informacion" 
+                        "formulario"
+                        "formulario";
+    row-gap: 0px;
+    justify-content: space-between;
+    align-content: center;
+    
+    
+    &__api{
+        @include sizes(100%,100%);
+        grid-area: api;
+        display: flex;
+        @include displayFlex(column, center , center , center , nowrap , auto );
+
+        .grid-contacto__img{
+            @include sizes(90%,95%);
+            justify-self: center;
+            border: solid 10px $colorPadding;
+        }
+
+}
+
+    &__formulario{
+        grid-area: formulario;
+        @include sizes(100%,100%);
+        @include fontValues(normal, normal , $font-family , 25px , black , center);
+        text-transform: none;
+        padding: 0%;
+        display: flex;
+        @include displayFlex(column, center , space-between , center , nowrap , auto);
+        margin: 15px;
+
+
+        .datosPersonalesContacto{
+            @include sizes(100%,100%);
+            @include fontValues( normal , bolder , $font-family , 35px , black , center);
+            text-transform: none;
+        }
+}
+
+    &__informacion{
+    grid-area: informacion;
+    @include sizes(100%,100%);
+    @include fontValues(normal , normal , $font-family , 28px , black , center );
+    display: flex;
+    @include displayFlex(column , center , center , center , nowrap , auto );
+    padding: auto;
+}
+
+    &__texto{
+        @include fontValues(normal , normal , $font-family , 28px , black , center );
+}
+
+    &__texto-h2{
+        @include fontValues(normal , bolder , $font-family , 35px , black , center );
+}
+
+}
+
+/*
+Pertenece a la pestaña Preguntas frecuentes /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+.main-faq{
+    @include sizes(100%,100%);
+    background-color: $colorFondo;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 45% 50%;
+    grid-template-areas:"titulo"
+                        "container"
+                        "container2";
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    &__titulo{
+        grid-area: titulo;
+        @include fontValues(normal, bolder , $font-family , $sizeTitulosTablets , black , center);
+        text-transform: none;
+        padding: $paddingTituloCelulares;
+        align-self: center;
+        justify-self: center;
+    }
+
+    &__primer-container{
+        grid-area: container;
+        @include sizes(100%,100%);
+        display: flex;
+        @include displayFlex( column , center , space-between , center , nowrap , auto );
+        padding: 3% 3% 0% 3%;
+    }
+
+    &__segundo-container{
+        grid-area: container2;
+        @include sizes(100%,100%);
+        display: flex;
+        @include displayFlex( column , center , space-between , center , nowrap , auto );
+        padding: 3% 3% 0% 3%;
+
+
+        
+    }
+
+    &__preguntas{
+        @include fontValues(normal , bolder , $font-family , 28px , black , center );
+    }
+
+    &__respuestas{
+        @include fontValues(normal, normal , $font-family , 23px , black, center);
+        padding: 0%;
+    }
+}
+
+/*
+Pertenece a la pestaña Quienessomos.html /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+.main-qs{
+    height: 100%;
+    background-color: $colorFondo;
+    display: flex;
+    @include displayFlex(column , center , space-evenly, center , nowrap , auto );
+    
+    .container-qs{
+        @include displayFlex(column , center , space-evenly, center , nowrap , auto );
+    }
+
+    &__titulo{
+        @include fontValues(normal , bolder , $font-family , $sizeTitulosTablets , black , center );
+        text-transform: none;
+        grid-area: titulo;
+        padding: $paddingTituloCelulares;
+    }
+
+    &__imgs{
+        @include sizes(100%,100%);
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        margin: auto;
+        
+
+        .main-qs__img{
+            @include sizes(95%,95%);
+            margin: auto;
+            border: 5px solid $colorPadding;
+            
+        }
+    }
+    
+    &__texto{
+        @include sizes(100%,100%);
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+
+        .main-qs__h2{
+            @include fontValues(normal , bolder , $font-family , 35px , black , center );
+            text-transform: none;
+            padding: $paddingTituloCelulares;
+        }
+        
+        .main-qs__p{
+            @include fontValues(normal , normal , $font-family , 25px , black , center );
+            padding: 2%;
+        }
+    }
+}
+
+    }
+
+
+/*
+Un poco mas grande que tablets (Laptops, notebooks) //////////////////////////////////////////////////////////////////////////////////////////////    
+*/
+
+@media only screen and (min-width:992px){
+        
+    .header{
+        background-image: url(../Imagenes/imagenindexdos.png);
+        background-size: cover;
+        background-position-y: 50%;
+        background-position-x: 40%;
+        @include sizes(100vh,100%);
+        display: grid;
+        grid-template-columns: repeat(3 ,33.33%);
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:"logo logo logo"
+                            "logo logo logo"
+                            "secciones secciones secciones";
+
+            a{
+            text-decoration: none;
+            color: white;
+                }
+        
+        &__logoHeader{
+            @include sizes(110%, 90%);
+            display: flex;
+            @include displayFlex(column, center , center , center , nowrap, auto);
+            grid-area: logo;
+
+            .header__imgLogo{
+                @include sizes(100%,100%)
+            }
+        }
+
+        &__navIndex{
+            @include sizes(auto, 100%);
+            display: inline-block;
+            grid-area: secciones;
+            align-self: end;
+            margin: 2% 0% 2% 0%;
+
+            .header__seccionesIndex{
+                text-transform: none;
+                list-style: none;
+                display:flex;
+                @include displayFlex(row,flex-end ,space-around ,center , nowrap ,auto);
+
+                .header__itemIndex{
+                    @include fontValues(normal, bolder , $font-family , 35px , white , center);
+                    display: inline-block;
+                    margin: 0% 1% 0% 1%;
+                }
+            }
+        }
+    }
+
+    
+/*
+Main Index
+*/
+    .divMainPromociones{
+        background-color: $colorFondo;
+        @include sizes(100vh, 100%);
+        display: flex;
+        @include displayFlex(row , center , center , center , nowrap , auto);
+    }
+    
+    .divImagenPromociones{
+        @include sizes(60%, 100%);
+        margin: 2%;
+    }
+    
+    .imagenPromociones{
+        @include sizes(100%, 100%);
+        border: 10px solid $colorPadding;
+        margin: 0%;
+    }
+    
+    .divTextoPromociones{
+        @include sizes(100%,100%);
+        margin: 0%;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .tituloPromociones{
+        @include fontValues(normal, bolder , $font-family , 80px , black , center);
+    }
+    
+    .parrafoPromociones{
+        @include fontValues(normal, normal , $font-family , 60px , black , center);
+    }
+    
+    
+    .imagenSeparadoraDeDiv{
+        background-image: url(../Imagenes/imagenseparadorados.png);
+        background-size: cover;
+        background-position-y: center;
+        background-position-x: center;
+        @include sizes(100vh,100%)
+    }
+    /*
+    Aca empieza el apartado de historia del index
+    */
+    .divMainHistoria{
+        background-color: $colorFondo;
+        @include sizes(100vh, 100%);
+        @include displayFlex(row-reverse, center , center , center , nowrap, auto );
+        display: flex;
+    }
+    
+    .divImagenMainHistoria{
+        @include sizes(55%,100%);
+        margin: 5% 5% 5% 2%;
+    }
+    
+    .imagenMainHistoria{
+        @include sizes(100%,100%);
+        border: 10px solid $colorPadding;
+    }
+    
+    .divTextoMainHistoria{
+        justify-content: center;
+        align-content: center;
+        margin: 2% 2% 2% 2% ;
+        width: 90%;
+    }
+    
+    .tituloMainHistoria{
+        @include fontValues(normal , bolder , $font-family , 50px , black , center );
+    }
+    
+    .parrafoMainHistoria{
+        @include fontValues(normal, normal , $font-family , 25px , black , center );
+    }
+
+/*
+        Footer///////////////////////////////////////////
+*/
+    .footer{
+        background-color: $colorFooter;
+        height: 100%;
+        width: 100%;
+        
+    .footer-container{
+        display: grid;
+        grid-template-columns: 500px 1fr 300px;
+        grid-template-rows: repeat(2, 50%);
+        grid-template-areas:"logo redes secciones"
+                            "logo redes secciones";
+        justify-content: center;
+        justify-items: center;
+        
+
+        &__logo{
+            grid-area: logo;
+            @include sizes(100%,100%);
+            display: flex;
+            @include displayFlex( column , center , center , center , nowrap , auto );
+
+            .footer-container__img{
+                @include sizes(85%,80%);
+                padding: 0%;
+                margin: auto;
+            }
+        }
+
+        &__redes{
+            grid-area: redes;
+            @include sizes(100%,100%);
+            display: flex;
+            @include displayFlex(row, center , center , center , nowrap , auto );
+
+            .footer-container__listaRedes{
+                @include sizes(100%,100%);
+                display: flex;
+                @include displayFlex(row, center , center, center, nowrap , auto );
+                padding: 0%;
+
+                .footer-container__itemRedes{
+                    @include sizes(100%,100%);
+                    display: flex;
+                    @include displayFlex(row, center, center , center , nowrap , auto );
+
+                    .footer-container__iconos{
+                        @include sizes(60%,60%);
+                    display: flex;
+                    @include displayFlex(row, center, center , center , nowrap , auto );
+                    }
+                }
+            }
+        }
+        
+        &__secciones{
+            grid-area: secciones;
+            @include sizes(auto,auto);
+            display: flex;
+            @include displayFlex(column , center , space-evenly , center , nowrap , auto );
+
+            .footer-container__listaSecciones{
+                @include sizes(auto,auto);
+                display: flex;
+                @include displayFlex(column, center , space-evenly , center , nowrap , auto );
+
+                .footer-container__item{
+                    @include fontValues(normal, bold , $font-family , 20px , white , center );
+                    text-transform: none;
+                    padding-top: 10%;
+                    display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+
+    
+/*
+Navbar secciones con BS5
+*/
+
+.headerSecciones{
+background-color: $colorNav;
+}
+
+.container{
+background-color: $colorNav;
+width: 100%;
+}
+
+.navbar-brand{
+height: 100%;
+width: 50%;
+}
+
+.navbar{
+width: 100%;
+height: 100%;
+}
+
+.navbar-nav{
+width: 100%;
+height: 100%;
+display: flex;
+align-content: center;
+justify-content: space-between;
+}
+
+.logoSecciones{
+width: 55%;
+height: 55%;
+}
+
+.itemNav{
+@include fontValues(normal, bold , $font-family , 27px , white , center );
+text-transform: none;
+display: flex;
+flex-wrap: nowrap;
+}
+
+/*
+Fin navbar con BS
+*/
+
+
+.mainMenu{
+@include sizes(100%,100% );
+background-color: $colorFondo;
+margin: 0%;
+}
+
+.tituloMainMenu{
+@include fontValues(normal , bolder , $font-family , $sizeTitulos , black , center );
+padding: 4%;
+}
+
+.losMejoresPlatosMenu{
+@include sizes(100%,100% );
+padding: 3%;
+}
+
+.ulDelMenu{
+display: grid;
+grid-template-columns: repeat(3 , 30%);
+grid-template-rows: repeat(3, 33%);
+grid-template-areas:"imagen1 imagen2 imagen3"
+                    "imagen4 imagen5 imagen6"
+                    "imagen7 imagen8 imagen9";
+justify-content: center;
+align-content: center;
+row-gap: 2%;
+column-gap: 2%;
+}
+
+.listaMenuUno{
+grid-area: imagen1;
+@include sizes(100%,100%);
+display: flex;
+@include displayFlex(column , center , center , center , nowrap , auto );
+margin: 0% ;
+align-content: center;
+justify-content: center;
+flex-direction: column;
+}
+
+.listaMenuDos{
+grid-area: imagen4;
+@include sizes(100%,100%);
+display: flex;
+@include displayFlex(column , center , center , center , nowrap , auto );
+}
+
+.listaMenuTres{
+grid-area: imagen7;
+@include sizes(100%,100%);
+display: flex;
+@include displayFlex(column , center , center , center , nowrap , auto );
+}
+
+.listaMenuCuatro{
+grid-area: imagen9;
+@include sizes(100%,100%);
+display: flex;
+@include displayFlex(column , center , center , center , nowrap , auto );
+}
+
+.listaMenuCinco{
+grid-area: imagen8;
+@include sizes(100%,100%);
+display: flex;
+@include displayFlex(column , center , center , center , nowrap , auto );
+}
+
+.listaMenuSeis{
+grid-area:imagen3;
+@include sizes(100%,100%);
+display: flex;
+@include displayFlex(column , center , center , center , nowrap , auto );
+}
+
+.listaMenuSiete{
+grid-area:imagen2;
+@include sizes(100%,100%);
+display: flex;
+@include displayFlex(column , center , center , center , nowrap , auto );
+}
+
+.listaMenuOcho{
+grid-area:imagen5;
+@include sizes(100%,100%);
+display: flex;
+@include displayFlex(column , center , center , center , nowrap , auto );
+}
+
+.listaMenuNueve{
+grid-area:imagen6;
+@include sizes(100%,100%);
+display: flex;
+@include displayFlex(column , center , center , center , nowrap , auto );
+}
+
+
+.listaMenuUno:hover , .listaMenuDos:hover , .listaMenuTres:hover , .listaMenuCuatro:hover , .listaMenuCinco:hover {
+width: 115%;
+height: 115%;
+transition: all 1s;
+}
+
+.imagenNumeroUno , .imagenNumeroDos , .imagenNumeroTres , .imagenNumeroCuatro , .imagenNumeroCinco , .imagenNumeroSeis , .imagenNumeroSiete , .imagenNumeroOcho , .imagenNumeroNueve{
+height: 80%;
+width: 80%;
+justify-self: center;
+align-self: center;
+border: solid 10px $colorPadding ;
+
+}
+
+.pDelMenu{
+@include fontValues(normal , normal , $font-family , 23px , black , center );
+margin: auto;
+}
+
+/*
+Pertenece a la pestaña de Reservas /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+.main-reservas{
+@include sizes(100vh, 100%);
+background-color: $colorFondo;
+
+.containerReservas{
+    @include sizes(85%,100%);
+    display: flex;
+    @include displayFlex(row , center , center , center , nowrap , auto );
+    padding: 2%;
+}
+
+&__titulo{
+    @include fontValues(normal, bold , $font-family , $sizeTitulos , black , center);
+    text-transform: none;
+    padding: 0;
+}
+
+&__imagen{
+    @include sizes(100%,40%);
+    display: flex;
+    @include displayFlex(column, center , center , center , nowrap , auto );
+
+    .main-reservas__img{
+        @include sizes(100%,100%);
+        margin: auto;
+        border: 10px solid $colorPadding;
+    }
+}
+
+&__informacion{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    width: 47%;
+    height: 100%;
+
+}
+
+.accordion{
+    @include sizes(100%,50%);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.accordion-item{
+    background-color: transparent;
+    @include fontValues(normal, normal , $font-family , 20px , black , center );
+}
+
+.accordion-button {
+    background-color: rgba(173, 98, 0, 0.582) !important;
+    @include fontValues( normal , normal , $font-family , 23px , black , center );
+}
+
+}
+
+/*
+Pertenece a la pestaña de Contacto /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+.main-contacto{
+height: 100%;
+width: 100%;
+background-color: $colorFondo;
+
+&__titulo{
+    @include fontValues(normal, bold , $font-family , $sizeTitulos , black , center );
+    text-transform: none;
+    margin: auto;
+    padding: 2%;
+}
+
+}
+
+.grid-contacto{
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: 50% 50%;
+grid-template-areas:"api api"
+                    "formulario informacion";
+row-gap: 5px;
+justify-content: space-between;
+align-content: center;
+
+
+&__api{
+    @include sizes(100%,95%);
+    margin: auto;
+    grid-area: api;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .grid-contacto__img{
+        @include sizes(100%,100%);
+        justify-self: center;
+        border: solid 7px $colorPadding;
+    }
+
+}
+
+&__formulario{
+    @include sizes(100%,100%);
+    @include fontValues(normal, normal , $font-family , 20px , black , center );
+    text-transform: none;
+    grid-area: formulario;
+    display: flex;
+    @include displayFlex(column , center , center, center , nowrap , auto );
+    padding: 5%;
+
+    .datosPersonalesContacto{
+        @include fontValues(normal, bolder , $font-family , 30px , black , center );
+        text-transform: none;
+    }
+}
+
+&__informacion{
+grid-area: informacion;
+height: min-content;
+margin: auto;
+display: flex;
+flex-direction: column;
+justify-items: center;
+align-content: center;
+justify-content: center;
+}
+
+&__texto-h2{
+@include fontValues(normal, bolder , $font-family , 35px , black , center );
+}
+
+&__texto{
+    @include fontValues(normal, normal , $font-family , 25px , black , center );
+}
+
+}
+
+/*
+Pertenece a la pestaña Preguntas frecuentes /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+    .main-faq{
+    @include sizes(100%,100%);
+    background-color: $colorFondo;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: 150px repeat(2, 40%);
+    grid-template-areas:"titulo titulo"
+                        "container container2"
+                        "container container2";
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+
+
+    &__titulo{
+        @include fontValues(normal , bolder , $font-family , $sizeTitulos , black , center );
+        text-transform: none;
+        grid-area: titulo;
+        padding: 2% 2% 2% 2%;
+    }
+
+    &__primer-container{
+        grid-area: container;
+        @include sizes(100%,100%);
+        display: flex;
+        @include displayFlex(column , center , space-evenly , center , nowrap , auto );
+        padding: 0% 7% 0% 5%;
+    }
+
+    &__segundo-container{
+        grid-area: container2;
+        @include sizes(100%,100%);
+        display: flex;
+        @include displayFlex(column , center , space-evenly , center , nowrap , auto );
+        padding: 0% 7% 0% 5%;
+    }
+
+    &__preguntas{
+        @include fontValues(normal , bolder , $font-family , 35px , black , center );
+    }
+
+
+    &__respuestas{
+        @include fontValues(normal, normal , $font-family , 25px , black , center );
+    }
+    }
+
+/*
+PESTAÑA QUIENES SOMOS //////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+.main-qs{
+    @include sizes(100vh,100%);
+    background-color: $colorFondo;
+    display: flex;
+
+    &__titulo{
+        @include fontValues(normal, bolder , $font-family , $sizeTitulos , black , center );
+        text-transform: none;
+        padding: 2% 2% 1% 2%;
+    }
+
+    .container-qs{
+        @include sizes(100%,100%);
+        display: flex;
+        @include displayFlex(row, center , center , center , nowrap , auto );
+    }
+
+    &__imgs{
+        @include sizes(100%,50% );
+        display: flex;
+        @include displayFlex(column , center , center , center , nowrap , auto );
+
+        .main-qs__img{
+            @include sizes(60%,90%);
+            margin: 5% 5% 5% 8%;
+            border: 10px solid $colorPadding;
+        }
+    }
+
+    &__texto{
+        @include sizes(100%,47%);
+        display: flex;
+        @include displayFlex(column , center , space-evenly , center , nowrap , auto );
+
+        .main-qs__h2{
+            @include fontValues(normal , bolder , $font-family , 25px , black , center );
+            text-transform: none;
+        }
+        
+        .main-qs__p{
+            @include fontValues(normal , normal , $font-family , 18px , black , center );
+        }
+    }
+}
+
+    }
+
+
+/*
+//////////////////////////////////// MONITORES////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+    @media only screen and (min-width:1200px){
+        
+        .header{
+            background-image: url(../Imagenes/imagenindexdos.png);
+            background-size: cover;
+            background-position-y: 50%;
+            background-position-x: 40%;
+            @include sizes(100vh,100%);
+            display: grid;
+            grid-template-columns: repeat(3 ,33.33%);
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-areas:"logo logo logo"
+                                "logo logo logo"
+                                "secciones secciones secciones";
+
+                a{
+                text-decoration: none;
+                color: white;
+                    }
+            
+            &__logoHeader{
+                @include sizes(110%, 90%);
+                display: flex;
+                @include displayFlex(column, center , center , center , nowrap, auto);
+                grid-area: logo;
+
+                .header__imgLogo{
+                    @include sizes(100%,100%)
+                }
+            }
+
+            &__navIndex{
+                @include sizes(auto, 100%);
+                display: inline-block;
+                grid-area: secciones;
+                align-self: end;
+                margin: 2% 0% 2% 0%;
+
+                .header__seccionesIndex{
+                    text-transform: none;
+                    list-style: none;
+                    display:flex;
+                    @include displayFlex(row,flex-end ,space-around ,center , nowrap ,auto);
+
+                    .header__itemIndex{
+                        @include fontValues(normal, bolder , $font-family , 35px , white , center);
+                        display: inline-block;
+                        margin: 0% 1% 0% 1%;
+                    }
+                }
+            }
+        }
+
+        
+    /*
+    Main Index
+    */
+        .divMainPromociones{
+            background-color: $colorFondo;
+            @include sizes(100vh, 100%);
+            display: flex;
+            @include displayFlex(row , center , center , center , nowrap , auto);
+        }
+        
+        .divImagenPromociones{
+            @include sizes(85%, 100%);
+            margin: 2%;
+        }
+        
+        .imagenPromociones{
+            @include sizes(100%, 100%);
+            border: 10px solid $colorPadding;
+            margin: 0%;
+        }
+        
+        .divTextoPromociones{
+            @include sizes(100%,100%);
+            margin: 0%;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .tituloPromociones{
+            @include fontValues(normal, bolder , $font-family , 100px , black , center);
+        }
+        
+        .parrafoPromociones{
+            @include fontValues(normal, normal , $font-family , 100px , black , center);
+        }
+        
+        
+        .imagenSeparadoraDeDiv{
+            background-image: url(../Imagenes/imagenseparadorados.png);
+            background-size: cover;
+            background-position-y: center;
+            background-position-x: center;
+            @include sizes(100vh,100%)
+        }
+        /*
+        Aca empieza el apartado de historia del index
+        */
+        .divMainHistoria{
+            background-color: $colorFondo;
+            @include sizes(100vh, 100%);
+            @include displayFlex(row-reverse, center , center , center , nowrap, auto );
+            display: flex;
+        }
+        
+        .divImagenMainHistoria{
+            @include sizes(75%,100%);
+            margin: 5% 5% 5% 2%;
+        }
+        
+        .imagenMainHistoria{
+            @include sizes(100%,100%);
+            border: 10px solid $colorPadding;
+        }
+        
+        .divTextoMainHistoria{
+            justify-content: center;
+            align-content: center;
+            margin: 2% 2% 2% 2% ;
+            width: 90%;
+        }
+        
+        .tituloMainHistoria{
+            @include fontValues(normal , bolder , $font-family , 70px , black , center );
+        }
+        
+        .parrafoMainHistoria{
+            @include fontValues(normal, normal , $font-family , 30px , black , center );
+        }
+
+    /*
+            Footer///////////////////////////////////////////
+    */
+        .footer{
+            background-color: $colorFooter;
+            height: 100%;
+            width: 100%;
+            
+        .footer-container{
+            display: grid;
+            grid-template-columns: 500px 1fr 300px;
+            grid-template-rows: repeat(2, 50%);
+            grid-template-areas:"logo redes secciones"
+                                "logo redes secciones";
+            justify-content: center;
+            justify-items: center;
+            
+
+            &__logo{
+                grid-area: logo;
+                @include sizes(100%,100%);
+                display: flex;
+                @include displayFlex( column , center , center , center , nowrap , auto );
+
+                .footer-container__img{
+                    @include sizes(100%,100%);
+                    padding: 0%;
+                    margin: auto;
+                }
+            }
+
+            &__redes{
+                grid-area: redes;
+                @include sizes(100%,100%);
+                display: flex;
+                @include displayFlex(row, center , center , center , nowrap , auto );
+
+                .footer-container__listaRedes{
+                    @include sizes(100%,100%);
+                    display: flex;
+                    @include displayFlex(row, center , center, center, nowrap , auto );
+                    padding: 0%;
+
+                    .footer-container__itemRedes{
+                        @include sizes(100%,100%);
+                        display: flex;
+                        @include displayFlex(row, center, center , center , nowrap , auto );
+
+                        .footer-container__iconos{
+                            @include sizes(60%,60%);
+                        display: flex;
+                        @include displayFlex(row, center, center , center , nowrap , auto );
+                        }
+                    }
+                }
+            }
+            
+            &__secciones{
+                grid-area: secciones;
+                @include sizes(auto,auto);
+                display: flex;
+                @include displayFlex(column , center , space-evenly , center , nowrap , auto );
+
+                .footer-container__listaSecciones{
+                    @include sizes(auto,auto);
+                    display: flex;
+                    @include displayFlex(column, center , space-evenly , center , nowrap , auto );
+
+                    .footer-container__item{
+                        @include fontValues(normal, bold , $font-family , 25px , white , center );
+                        text-transform: none;
+                        padding-top: 10%;
+                        display: inline-block;
+                        }
+                    }
+                }
+            }
+        }
+
+        
+/*
+Navbar secciones con BS5
+*/
+
+.headerSecciones{
+    background-color: $colorNav;
+}
+
+.container{
+    background-color: $colorNav;
+    width: 100%;
+}
+
+.navbar-brand{
+    height: 100%;
+    width: 50%;
+}
+
+.navbar{
+    width: 100%;
+    height: 100%;
+}
+
+.navbar-nav{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.logoSecciones{
+    width: 55%;
+    height: 55%;
+}
+
+.itemNav{
+    @include fontValues(normal, bold , $font-family , 27px , white , center );
+    text-transform: none;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+/*
+Fin navbar con BS
+*/
+
+
+.mainMenu{
+    @include sizes(100%,100% );
+    background-color: $colorFondo;
+    margin: 0%;
+}
+
+.tituloMainMenu{
+    @include fontValues(normal , bolder , $font-family , $sizeTitulos , black , center );
+    padding: 2% 0% 0% 0%;
+}
+
+.losMejoresPlatosMenu{
+    @include sizes(100%,100% );
+    padding: auto;
+}
+
+.ulDelMenu{
+    display: grid;
+    grid-template-columns: repeat(3 , 30%);
+    grid-template-rows: repeat(3, 33%);
+    grid-template-areas:"imagen1 imagen2 imagen3"
+                        "imagen4 imagen5 imagen6"
+                        "imagen7 imagen8 imagen9";
+    justify-content: center;
+    align-content: center;
+    row-gap: 2%;
+    column-gap: 2%;
+}
+
+.listaMenuUno{
+    grid-area: imagen1;
+    @include sizes(100%,100%);
+    display: flex;
+    @include displayFlex(column , center , center , center , nowrap , auto );
+    margin: 0% ;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.listaMenuDos{
+    grid-area: imagen4;
+    @include sizes(100%,100%);
+    display: flex;
+    @include displayFlex(column , center , center , center , nowrap , auto );
+}
+
+.listaMenuTres{
+    grid-area: imagen7;
+    @include sizes(100%,100%);
+    display: flex;
+    @include displayFlex(column , center , center , center , nowrap , auto );
+}
+
+.listaMenuCuatro{
+    grid-area: imagen9;
+    @include sizes(100%,100%);
+    display: flex;
+    @include displayFlex(column , center , center , center , nowrap , auto );
+}
+
+.listaMenuCinco{
+    grid-area: imagen8;
+    @include sizes(100%,100%);
+    display: flex;
+    @include displayFlex(column , center , center , center , nowrap , auto );
+}
+
+.listaMenuSeis{
+    grid-area:imagen3;
+    @include sizes(100%,100%);
+    display: flex;
+    @include displayFlex(column , center , center , center , nowrap , auto );
+}
+
+.listaMenuSiete{
+    grid-area:imagen2;
+    @include sizes(100%,100%);
+    display: flex;
+    @include displayFlex(column , center , center , center , nowrap , auto );
+}
+
+.listaMenuOcho{
+    grid-area:imagen5;
+    @include sizes(100%,100%);
+    display: flex;
+    @include displayFlex(column , center , center , center , nowrap , auto );
+}
+
+.listaMenuNueve{
+    grid-area:imagen6;
+    @include sizes(100%,100%);
+    display: flex;
+    @include displayFlex(column , center , center , center , nowrap , auto );
+}
+
+
+.listaMenuUno:hover , .listaMenuDos:hover , .listaMenuTres:hover , .listaMenuCuatro:hover , .listaMenuCinco:hover {
+    width: 115%;
+    height: 115%;
+    transition: all 1s;
+}
+
+.imagenNumeroUno , .imagenNumeroDos , .imagenNumeroTres , .imagenNumeroCuatro , .imagenNumeroCinco , .imagenNumeroSeis , .imagenNumeroSiete , .imagenNumeroOcho , .imagenNumeroNueve{
+    height: 80%;
+    width: 80%;
+    justify-self: center;
+    align-self: center;
+    border: solid 10px $colorPadding ;
+    
+}
+
+.pDelMenu{
+    @include fontValues(normal , normal , $font-family , 23px , black , center );
+    margin: auto;
+}
+
+/*
+Pertenece a la pestaña de Reservas /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+.main-reservas{
+    @include sizes(100vh, 100%);
+    background-color: $colorFondo;
+
+    .containerReservas{
+        @include sizes(80%,100%);
+        display: flex;
+        @include displayFlex(row , center , center , center , nowrap , auto );
+        padding: 2%;
+    }
+
+    &__titulo{
+        @include fontValues(normal, bold , $font-family , $sizeTitulos , black , center);
+        text-transform: none;
+        padding: 0;
+    }
+
+    &__imagen{
+        @include sizes(100%,40%);
+        display: flex;
+        @include displayFlex(column, center , center , center , nowrap , auto );
+
+        .main-reservas__img{
+            @include sizes(100%,80%);
+            margin: auto;
+            border: 10px solid $colorPadding;
+        }
+    }
+    
+    &__informacion{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+        width: 47%;
+        height: 100%;
+
+}
+
+    .accordion{
+        @include sizes(100%,50%);
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .accordion-item{
+        background-color: transparent;
+        @include fontValues(normal, normal , $font-family , 17px , black , center );
+    }
+
+    .accordion-button {
+        background-color: rgba(173, 98, 0, 0.582) !important;
+        @include fontValues( normal , normal , $font-family , 23px , black , center );
+}
+
+}
+
+/*
+Pertenece a la pestaña de Contacto /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+.main-contacto{
+    height: 100%;
+    width: 100%;
+    background-color: $colorFondo;
+
+    &__titulo{
+        @include fontValues(normal, bold , $font-family , $sizeTitulos , black , center );
+        text-transform: none;
+        margin: auto;
+        padding: 2%;
+    }
+
+}
+
+.grid-contacto{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 50% 50%;
+    grid-template-areas:"api api"
+                        "formulario informacion";
+    row-gap: 5px;
+    justify-content: space-between;
+    align-content: center;
+    
+    
+    &__api{
+        @include sizes(100%,95%);
+        margin: auto;
+        grid-area: api;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .grid-contacto__img{
+            @include sizes(100%,100%);
+            justify-self: center;
+            border: solid 7px $colorPadding;
+        }
+
+}
+
+    &__formulario{
+        @include sizes(100%,100%);
+        @include fontValues(normal, normal , $font-family , 20px , black , center );
+        text-transform: none;
+        grid-area: formulario;
+        display: flex;
+        @include displayFlex(column , center , center, center , nowrap , auto );
+        padding: 5%;
+
+        .datosPersonalesContacto{
+            @include fontValues(normal, bolder , $font-family , 30px , black , center );
+            text-transform: none;
+        }
+}
+
+    &__informacion{
+    grid-area: informacion;
+    height: min-content;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+&__texto-h2{
+    @include fontValues(normal, bolder , $font-family , 35px , black , center );
+}
+
+    &__texto{
+        @include fontValues(normal, normal , $font-family , 25px , black , center );
+}
+
+}
+
+/*
+Pertenece a la pestaña Preguntas frecuentes /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+.main-faq{
+    @include sizes(100%,100%);
+    background-color: $colorFondo;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: 150px repeat(2, 40%);
+    grid-template-areas:"titulo titulo"
+                        "container container2"
+                        "container container2";
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    
+
+    &__titulo{
+        @include fontValues(normal , bolder , $font-family , $sizeTitulos , black , center );
+        text-transform: none;
+        grid-area: titulo;
+        padding: 2% 2% 2% 2%;
+    }
+
+    &__primer-container{
+        grid-area: container;
+        @include sizes(100%,100%);
+        display: flex;
+        @include displayFlex(column , center , space-evenly , center , nowrap , auto );
+        padding: 0% 7% 0% 5%;
+    }
+
+    &__segundo-container{
+        grid-area: container2;
+        @include sizes(100%,100%);
+        display: flex;
+        @include displayFlex(column , center , space-evenly , center , nowrap , auto );
+        padding: 0% 7% 0% 5%;
+    }
+
+    &__preguntas{
+        @include fontValues(normal , bolder , $font-family , 35px , black , center );
+    }
+
+    
+    &__respuestas{
+        @include fontValues(normal, normal , $font-family , 25px , black , center );
+    }
+}
+
+/*
+PESTAÑA QUIENES SOMOS //////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+.main-qs{
+    @include sizes(100vh,100%);
+    background-color: $colorFondo;
+    
+    &__titulo{
+        @include fontValues(normal, bolder , $font-family , $sizeTitulos , black , center );
+        text-transform: none;
+        padding: 2% 2% 1% 2%;
+    }
+
+    .container-qs{
+        display: flex;
+        @include displayFlex(row, center , center , center , nowrap , auto );
+    }
+
+    &__imgs{
+        @include sizes(100%,50% );
+        display: flex;
+        @include displayFlex(column , center , center , center , nowrap , auto );
+
+        .main-qs__img{
+            @include sizes(90%,90%);
+            margin: 5% 5% 5% 8%;
+            border: 10px solid $colorPadding;
+        }
+    }
+    
+    &__texto{
+        @include sizes(100%,47%);
+        display: flex;
+        @include displayFlex(column , center , space-evenly , center , nowrap , auto );
+
+        .main-qs__h2{
+            @include fontValues(normal , bolder , $font-family , 30px , black , center );
+            text-transform: none;
+        }
+        
+        .main-qs__p{
+            @include fontValues(normal , normal , $font-family , 20px , black , center );
+        }
+    }
+}
+
+        }
