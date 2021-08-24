@@ -49,6 +49,10 @@ li{
     list-style: none;
 }
 
+ol , ul{
+    padding-left: 0%;
+}
+
 /*
 Pertenece a la pestaña index.html /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 */
@@ -891,12 +895,14 @@ Main Index
         &__secciones{
             @include sizes(80%, 100%);
             display: flex;
-            @include displayFlex(row , center , space-evenly , center , nowrap , 0% );
+            @include displayFlex(row , center , space-evenly , center , nowrap , auto );
             grid-area: secciones;
 
             .footer-container__listaSecciones{
+                @include sizes(100%,100%);
                 display: flex;
                 @include displayFlex(row , center , space-around , center , nowrap , auto );
+                justify-items: space-between;
                 padding: 0%;
 
                 .footer-container__item{
@@ -905,7 +911,7 @@ Main Index
                         list-style: none;
                         display: flex;
                         @include displayFlex(row, center , center , center , nowrap , auto);
-                        padding-right: 3%;
+                        padding: auto;
                     }
                 }
             } 
@@ -1064,8 +1070,8 @@ Pertenece a la pestaña de Menu ////////////////////////////////////////////////
 
 
 .listaMenuUno:hover , .listaMenuDos:hover , .listaMenuTres:hover , .listaMenuCuatro:hover , .listaMenuCinco:hover , .listaMenuSeis:hover , .listaMenuSiete:hover , .listaMenuOcho:hover , .listaMenuNueve:hover {
-    width: 115%;
-    height: 115%;
+    width: 105%;
+    height: 105%;
     transition: all 1s;
 }
 
@@ -1240,7 +1246,7 @@ Pertenece a la pestaña Preguntas frecuentes ///////////////////////////////////
     background-color: $colorFondo;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 100px 580px 620px;
+    grid-template-rows: 100px 600px 650px;
     grid-template-areas:"titulo"
                         "container"
                         "container2";
@@ -1257,7 +1263,7 @@ Pertenece a la pestaña Preguntas frecuentes ///////////////////////////////////
 
     &__primer-container{
         @include sizes(100%,100%);
-        padding: 3%;
+        padding: 0%;
         grid-area: container;
         display: flex;
         @include displayFlex( column , center , space-between , center , nowrap , auto );
@@ -1265,7 +1271,7 @@ Pertenece a la pestaña Preguntas frecuentes ///////////////////////////////////
 
     &__segundo-container{
         @include sizes(100%,100%);
-        padding: 2%;
+        padding: auto;
         grid-area: container2;
         display: flex;
         @include displayFlex(column, center , space-between , center , nowrap , auto );
@@ -1545,8 +1551,8 @@ Main Index
                 grid-area: secciones;
                 @include sizes(100%,100%);
                 display: flex;
-                @include displayFlex(row, center , center , center , nowrap , 0 );
-                padding: 0%;
+                @include displayFlex(row, center , center , center , nowrap , auto );
+                padding: auto;
 
 
                 .footer-container__listaSecciones{
@@ -1560,7 +1566,7 @@ Main Index
                         list-style: none;
                         display: flex;
                         @include displayFlex( row , center , center , center , nowrap , auto );
-                        padding: 0%;
+                        padding: auto;
                     }
                 }
             }
@@ -1806,13 +1812,12 @@ Pertenece a la pestaña de Contacto ////////////////////////////////////////////
 
 .grid-contacto{
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr) 50px;
+    grid-template-columns: 100%;
+    grid-template-rows: 2fr 2fr 2fr 200px;
     grid-template-areas:"api"
                         "informacion" 
                         "formulario"
                         "formulario";
-    row-gap: 0px;
     justify-content: space-between;
     align-content: center;
     
@@ -1839,8 +1844,6 @@ Pertenece a la pestaña de Contacto ////////////////////////////////////////////
         padding: 0%;
         display: flex;
         @include displayFlex(column, center , space-between , center , nowrap , auto);
-        margin: 15px;
-
 
         .datosPersonalesContacto{
             @include sizes(100%,100%);
@@ -1848,6 +1851,7 @@ Pertenece a la pestaña de Contacto ////////////////////////////////////////////
             text-transform: none;
         }
 }
+
 
     &__informacion{
     grid-area: informacion;
@@ -1859,11 +1863,11 @@ Pertenece a la pestaña de Contacto ////////////////////////////////////////////
 }
 
     &__texto{
-        @include fontValues(normal , normal , $font-family , 28px , black , center );
+        @include fontValues(normal , normal , $font-family , 25px , black , center );
 }
 
     &__texto-h2{
-        @include fontValues(normal , bolder , $font-family , 35px , black , center );
+        @include fontValues(normal , bolder , $font-family , 28px , black , center );
 }
 
 }
@@ -2975,8 +2979,8 @@ Fin navbar con BS
 
 
 .listaMenuUno:hover , .listaMenuDos:hover , .listaMenuTres:hover , .listaMenuCuatro:hover , .listaMenuCinco:hover {
-    width: 115%;
-    height: 115%;
+    width: 105%;
+    height: 105%;
     transition: all 1s;
 }
 
